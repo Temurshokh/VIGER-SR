@@ -8,7 +8,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-BOT = ROOT / "telegram_bot" / "bot.py"
+BOT_MODULE = "telegram_bot.bot"
+BOT_PACKAGE = ROOT / "telegram_bot"
 REQ = ROOT / "requirements.txt"
 TOKEN_FILE = ROOT / ".bot_token"
 
@@ -87,16 +88,22 @@ def read_token() -> str:
 def main() -> None:
     if sys.version_info < (3, 10):
         raise SystemExit("Python 3.10+ is required.")
-    if not BOT.exists():
-        raise SystemExit(f"Bot entrypoint not found: {BOT}")
+    if not BOT_PACKAGE.is_dir():
+        raise SystemExit(f"Telegram package not found: {BOT_PACKAGE}")
 
     python = ensure_venv()
     env = os.environ.copy()
     env["VIGER_TELEGRAM_TOKEN"] = read_token()
 
-    print("[VIGER] Starting Telegram bot...")
+    print("[VIGER] Starting Telegram bot as a Python module...")
     print("[VIGER] Python-only mode: no Visual Studio, no C++, no .exe.")
-    completed = subprocess.run([str(python), str(BOT)], cwd=str(ROOT), env=env)
+    # Run with -m so the repository root is on sys.path and `from python ...`
+    # works reliably inside telegram_bot.bot.
+    completed = subprocess.run(
+        [str(python), "-m", BOT_MODULE],
+        cwd=str(ROOT),
+        env=env,
+    )
     raise SystemExit(completed.returncode)
 
 
