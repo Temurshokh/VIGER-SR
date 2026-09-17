@@ -237,8 +237,7 @@ class TinyGPT(nn.Module):
                 SPECIAL_TOKENS["<SYSTEM>"],
             }:
                 break
-        generated = result[0, tokens.shape[1] :].tolist()
-        return generated
+        return result[0, tokens.shape[1] :].tolist()
 
 
 def _load_corpus(path: Path) -> str:
@@ -352,21 +351,30 @@ def load_or_train(
     return model, tokenizer
 
 
-def answer(bundle: tuple[TinyGPT, TinyBPE], user_text: str) -> str:
+def answer(
+    bundle: tuple[TinyGPT, TinyBPE],
+    user_text: str,
+    history: list[tuple[str, str]] | None = None,
+) -> str:
     model, tokenizer = bundle
     user_text = user_text.strip()
     if not user_text:
         raise ValueError("Message is empty.")
 
-    prompt = f"<SYSTEM> {SYSTEM_PROMPT} <USER> {user_text} <ASSISTANT>"
+    parts = [f"<SYSTEM> {SYSTEM_PROMPT}"]
+    for old_user, old_assistant in (history or [])[-3:]:
+        parts.append(f"<USER> {old_user.strip()} <ASSISTANT> {old_assistant.strip()}")
+    parts.append(f"<USER> {user_text} <ASSISTANT>")
+    prompt = " ".join(parts)
+
     ids = tokenizer.encode(prompt)
     if not ids:
         raise ValueError("Prompt tokenization produced no tokens.")
     device = next(model.parameters()).device
-    tokens = torch.tensor(ids, dtype=torch.long, device=device).unsqueeze(0)
+    tokens = torch.tensor(ids[-model.block :], dtype=torch.long, device=device).unsqueeze(0)
     generated = model.generate(tokens, tokenizer)
     text = tokenizer.decode(generated, keep_special=True)
-    for marker in ("<END>", "<USER>", "<SYSTEM>"):
+    for marker in ("<END>", "<USER>", "<SYSTEM>", "<ASSISTANT>"):
         text = text.split(marker, 1)[0]
     text = text.strip()
     if not text:
