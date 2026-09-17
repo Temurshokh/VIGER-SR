@@ -56,6 +56,7 @@ if (VIGER_SR_BUILD_CHAT)
         src/chat_main.cpp
         src/chat.cpp
         src/local_http_chat.cpp
+        src/local_http_chat_ctor.cpp
     )
     target_include_directories(viger-chat PRIVATE include)
     target_compile_features(viger-chat PRIVATE cxx_std_17)
@@ -86,6 +87,7 @@ if (VIGER_SR_BUILD_TESTS)
             tests/test_chat.cpp
             src/chat.cpp
             src/local_http_chat.cpp
+            src/local_http_chat_ctor.cpp
         )
         target_include_directories(viger-chat-tests PRIVATE include)
         if (MSVC)
