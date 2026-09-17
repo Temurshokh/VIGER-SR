@@ -5,4 +5,5 @@ __pycache__/
 *.pyc
 .venv/
 artifacts/
+telegram/.bot_token
 .DS_Store
