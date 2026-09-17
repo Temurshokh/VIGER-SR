@@ -31,16 +31,9 @@ if (VIGER_SR_ENABLE_ONNX)
     find_path(ONNXRUNTIME_INCLUDE_DIR
         NAMES onnxruntime_cxx_api.h
         HINTS "${ONNXRUNTIME_ROOT}/include")
-
-    if (WIN32)
-        find_library(ONNXRUNTIME_LIBRARY
-            NAMES onnxruntime
-            HINTS "${ONNXRUNTIME_ROOT}/lib")
-    else()
-        find_library(ONNXRUNTIME_LIBRARY
-            NAMES onnxruntime
-            HINTS "${ONNXRUNTIME_ROOT}/lib")
-    endif()
+    find_library(ONNXRUNTIME_LIBRARY
+        NAMES onnxruntime
+        HINTS "${ONNXRUNTIME_ROOT}/lib")
 
     if (NOT ONNXRUNTIME_INCLUDE_DIR OR NOT ONNXRUNTIME_LIBRARY)
         message(FATAL_ERROR
@@ -51,6 +44,9 @@ if (VIGER_SR_ENABLE_ONNX)
     target_include_directories(viger_sr_core PRIVATE "${ONNXRUNTIME_INCLUDE_DIR}")
     target_link_libraries(viger_sr_core PRIVATE "${ONNXRUNTIME_LIBRARY}")
     target_compile_definitions(viger_sr_core PRIVATE VIGER_SR_HAS_ONNX=1)
+
+    add_executable(viger-sr-neural src/neural_main.cpp)
+    target_link_libraries(viger-sr-neural PRIVATE viger_sr_core)
 endif()
 
 if (VIGER_SR_BUILD_CHAT)
