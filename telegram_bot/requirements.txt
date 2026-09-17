@@ -1,7 +1,0 @@
-python-telegram-bot>=22.0
-Pillow>=10.0
-torch>=2.2
-numpy>=2.0
-transformers>=4.45
-accelerate>=0.34
-pyttsx3>=2.90
