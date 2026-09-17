@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import os
 import shutil
+import sys
 import tempfile
 import time
 from pathlib import Path
@@ -14,7 +15,11 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import Conflict
 from telegram.ext import Application, CallbackQueryHandler, CommandHandler, ContextTypes, MessageHandler, filters
 
+# Make the repository root importable even when this file is launched directly.
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 CORPUS = ROOT / "data" / "chat.txt"
 CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
 
@@ -111,7 +116,7 @@ async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if _lm is not None:
         model, tokenizer = _lm
         params = sum(p.numel() for p in model.parameters())
-        lm_text = f"TinyGPT v2 • {params:,} params • vocab {tokenizer.vocab_size}"
+        lm_text = f"TinyGPT v3 • {params:,} params • vocab {tokenizer.vocab_size}"
 
     await update.message.reply_text(
         f"🧠 TinyLM: {lm_text}\n"
@@ -265,7 +270,7 @@ async def process_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
         history.append((text, response))
         context.user_data["history"] = history[-3:]
-        await status.edit_text(f"{response}\n\n({elapsed:.2f}s • local TinyGPT v2)")
+        await status.edit_text(f"{response}\n\n({elapsed:.2f}s • local TinyGPT v3)")
 
         if context.user_data.get("voice", False):
             workdir = Path(tempfile.mkdtemp(prefix="viger_voice_"))
