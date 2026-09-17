@@ -2,6 +2,7 @@
 #include "viger_sr/image_ops.hpp"
 #include "viger_sr/onnx_sr.hpp"
 
+#include <algorithm>
 #include <cstdlib>
 #include <exception>
 #include <iostream>
@@ -16,7 +17,7 @@ void print_help() {
               << "Examples:\n"
               << "  viger-sr-neural photo.jpg enhanced.png model.onnx 2\n"
               << "  viger-sr-neural photo.jpg enhanced.png model.onnx 2 768\n\n"
-              << "tile=0 disables tiled inference. A positive tile size uses 64px overlap.\n";
+              << "tile=0 disables tiled inference. A positive tile size uses up to 64px overlap.\n";
 }
 }
 
