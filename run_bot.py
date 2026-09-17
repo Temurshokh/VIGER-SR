@@ -25,15 +25,15 @@ def run_python(python: Path, *args: str) -> None:
 
 def verify_ai_stack(python: Path) -> None:
     probe = (
-        "import torch, torchvision, transformers; "
-        "from transformers import AutoImageProcessor, Swin2SRForImageSuperResolution; "
-        "import PIL, telegram"
+        "import torch, transformers, PIL, telegram; "
+        "from transformers import Swin2SRForImageSuperResolution"
     )
     try:
         run_python(python, "-c", probe)
+        print("[VIGER] AI stack OK.")
         return
     except subprocess.CalledProcessError:
-        print("[VIGER] AI package check failed; repairing the PyTorch/vision stack...")
+        print("[VIGER] AI package check failed; repairing the Python AI stack...")
 
     run_python(
         python,
@@ -43,7 +43,9 @@ def verify_ai_stack(python: Path) -> None:
         "--upgrade",
         "--force-reinstall",
         "torch",
-        "torchvision",
+        "transformers",
+        "Pillow",
+        "python-telegram-bot",
     )
     run_python(python, "-c", probe)
 
