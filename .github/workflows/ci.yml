@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check Python syntax
+        run: python -m compileall -q python
+
       - name: Configure
         run: cmake -S . -B build
 
