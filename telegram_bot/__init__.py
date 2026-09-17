@@ -1,0 +1,1 @@
+"""VIGER Telegram bot package."""
