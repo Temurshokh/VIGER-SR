@@ -8,3 +8,4 @@ artifacts/
 .cache/
 .bot_token
 .DS_Store
+data/user_learning.txt
