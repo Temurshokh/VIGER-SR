@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.20)
-project(VIGER_SR VERSION 0.2.0 LANGUAGES CXX)
+project(VIGER_SR VERSION 0.3.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(VIGER_SR_BUILD_TESTS "Build tests" ON)
-option(VIGER_SR_BUILD_CHAT "Build VIGER Chat foundation" ON)
+option(VIGER_SR_BUILD_CHAT "Build VIGER Chat" ON)
 option(VIGER_SR_ENABLE_ONNX "Enable ONNX Runtime neural inference" OFF)
 
 add_library(viger_sr_core
@@ -42,7 +42,10 @@ if (VIGER_SR_ENABLE_ONNX)
             "ONNX Runtime not found. Set ONNXRUNTIME_ROOT or disable VIGER_SR_ENABLE_ONNX.")
     endif()
 
-    target_sources(viger_sr_core PRIVATE src/onnx_sr.cpp)
+    target_sources(viger_sr_core PRIVATE
+        src/onnx_sr.cpp
+        src/onnx_tiled.cpp
+    )
     target_include_directories(viger_sr_core PRIVATE "${ONNXRUNTIME_INCLUDE_DIR}")
     target_link_libraries(viger_sr_core PUBLIC "${ONNXRUNTIME_LIBRARY}")
     target_compile_definitions(viger_sr_core PRIVATE VIGER_SR_HAS_ONNX=1)
@@ -70,6 +73,7 @@ endif()
 
 if (VIGER_SR_BUILD_TESTS)
     enable_testing()
+
     add_executable(viger-sr-tests
         tests/test_image.cpp
         src/image_io.cpp
