@@ -12,11 +12,13 @@ public:
     Image() = default;
 
     Image(int width, int height, int channels, T value = T{})
-        : width_(width), height_(height), channels_(channels),
-          data_(static_cast<std::size_t>(width) * height * channels, value) {
+        : width_(width), height_(height), channels_(channels) {
         if (width <= 0 || height <= 0 || channels <= 0) {
             throw std::invalid_argument("Image dimensions/channels must be positive");
         }
+        data_.assign(static_cast<std::size_t>(width) * static_cast<std::size_t>(height) *
+                         static_cast<std::size_t>(channels),
+                     value);
     }
 
     int width() const noexcept { return width_; }
@@ -41,7 +43,9 @@ private:
         if (x < 0 || x >= width_ || y < 0 || y >= height_ || c < 0 || c >= channels_) {
             throw std::out_of_range("Image coordinate out of range");
         }
-        return (static_cast<std::size_t>(y) * width_ + x) * channels_ + c;
+        return (static_cast<std::size_t>(y) * static_cast<std::size_t>(width_) +
+                static_cast<std::size_t>(x)) * static_cast<std::size_t>(channels_) +
+               static_cast<std::size_t>(c);
     }
 
     int width_ = 0;
