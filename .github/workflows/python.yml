@@ -1,0 +1,32 @@
+name: VIGER Python CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Compile Python files
+        run: python -m compileall -q run.py run_bot.py python telegram_bot
+
+      - name: Import smoke test
+        run: python -c "import torch, PIL, transformers, telegram; from transformers import Swin2SRForImageSuperResolution; from python.viger_tiny_lm import TinyBPE, TinyGPT; from python.sr_engine import _prepare_input; print('VIGER imports OK')"
+
+      - name: Model/tokenizer smoke test
+        run: python -c "from python.viger_tiny_lm import TinyBPE, TinyGPT; t=TinyBPE.train('User: Hi\\nAssistant: Hello! <USER> <ASSISTANT> <END>'); assert t.decode(t.encode('Hello!'))=='Hello!'; m=TinyGPT(t.vocab_size); print(f'TinyGPT OK: {sum(p.numel() for p in m.parameters()):,} parameters')"
