@@ -1,6 +1,6 @@
-"""Primary Python launcher for the VIGER Telegram experiment."""
+"""Single entry point for the VIGER Telegram experiment."""
 
-from run_bot import main
+from telegram_bot.bot import main
 
 
 if __name__ == "__main__":
