@@ -10,6 +10,7 @@ option(VIGER_SR_BUILD_CHAT "Build VIGER Chat foundation" ON)
 option(VIGER_SR_ENABLE_ONNX "Enable ONNX Runtime neural inference" OFF)
 
 add_library(viger_sr_core
+    src/image_io.cpp
     src/image_ops.cpp
     src/ppm.cpp
 )
@@ -19,6 +20,7 @@ target_compile_features(viger_sr_core PUBLIC cxx_std_17)
 
 if (MSVC)
     target_compile_options(viger_sr_core PRIVATE /W4 /permissive-)
+    target_link_libraries(viger_sr_core PRIVATE windowscodecs ole32)
 else()
     target_compile_options(viger_sr_core PRIVATE -Wall -Wextra -Wpedantic)
 endif()
@@ -67,10 +69,14 @@ if (VIGER_SR_BUILD_TESTS)
     enable_testing()
     add_executable(viger-sr-tests
         tests/test_image.cpp
+        src/image_io.cpp
         src/image_ops.cpp
         src/ppm.cpp
     )
     target_include_directories(viger-sr-tests PRIVATE include)
+    if (MSVC)
+        target_link_libraries(viger-sr-tests PRIVATE windowscodecs ole32)
+    endif()
     add_test(NAME viger-sr-tests COMMAND viger-sr-tests)
 
     if (VIGER_SR_BUILD_CHAT)
