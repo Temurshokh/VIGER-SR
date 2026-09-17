@@ -9,9 +9,12 @@ ChatSession
    |
 IChatModel
    |
-+--------------------------+
-|                          |
-FallbackChatModel      neural provider
++-------------------------------+
+|                               |
+FallbackChatModel      LocalHttpChatModel
+                              |
+                              v
+                    local model runtime
 ```
 
 `ChatSession` owns conversation state. A model provider receives the current history and the newest user message, then returns one assistant message.
@@ -26,6 +29,50 @@ The project should not care whether the model is:
 - or a future C++ neural engine.
 
 Only the provider changes. The session, commands, history, and future desktop UI remain the same.
+
+## Local model adapter
+
+`LocalHttpChatModel` implements the provider contract using an ordinary HTTP client written in the VIGER C++ source tree. It does not require libcurl or a JSON package.
+
+The default endpoint is:
+
+```text
+http://127.0.0.1:8080/v1/chat/completions
+```
+
+The adapter sends the conversation as `system`, `user`, and `assistant` messages and parses the returned assistant `content`. It also trims old history by a configurable character budget before the request.
+
+A compatible local runtime can be run separately on the same machine. llama.cpp's current server exposes an OpenAI-compatible `/v1/chat/completions` route and supports chat `messages`, `temperature`, and token limits. citeturn968084search0
+
+Example local workflow:
+
+```text
+GGUF model
+   |
+llama-server :8080
+   |
+HTTP /v1/chat/completions
+   |
+LocalHttpChatModel
+   |
+ChatSession
+   |
+viger-chat
+```
+
+Then start VIGER with:
+
+```bash
+viger-chat --local
+```
+
+or:
+
+```bash
+viger-chat --local 127.0.0.1 8080
+```
+
+llama.cpp's CLI also documents direct local generation options such as `--model`, `--prompt`, `--system-prompt`, and `--n-predict`; the server path is preferred here because it keeps one model process alive between turns. citeturn944338search0
 
 ## Provider requirements
 
@@ -49,16 +96,10 @@ A provider should:
 4. return UTF-8 text;
 5. avoid writing model data into source-controlled files.
 
-## Planned providers
+## Tiny custom model path
 
-### Tiny native model
+`python/train_tiny_chat.py` remains a research sandbox for a small byte-level Transformer. It is intentionally separate from the runtime adapter so we can replace it with a better tokenizer/model later without touching the conversation layer.
 
-A small custom causal Transformer can eventually use a compact tokenizer and memory-mapped weights. This is the most self-contained option, but it needs a real training corpus and a dedicated inference implementation.
+## Future providers
 
-### GGUF/native runtime adapter
-
-A local GGUF model can be connected without changing `ChatSession`. The adapter owns tokenizer setup, prompt formatting, sampling, and context management.
-
-### Local HTTP adapter
-
-A local OpenAI-compatible inference server can also be wrapped behind `IChatModel`. This keeps VIGER itself free of a remote backend while allowing experimentation with different local models.
+A true native GGUF/libllama provider can be added later when we want to remove the local HTTP process entirely. That change should implement `IChatModel`, not rewrite `ChatSession`.
