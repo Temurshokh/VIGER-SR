@@ -42,7 +42,7 @@ http://127.0.0.1:8080/v1/chat/completions
 
 The adapter sends the conversation as `system`, `user`, and `assistant` messages and parses the returned assistant `content`. It also trims old history by a configurable character budget before the request.
 
-A compatible local runtime can be run separately on the same machine. llama.cpp's current server exposes an OpenAI-compatible `/v1/chat/completions` route and supports chat `messages`, `temperature`, and token limits. citeturn968084search0
+A compatible local runtime can be run separately on the same machine. For example, llama.cpp's server exposes an OpenAI-compatible `/v1/chat/completions` route and accepts chat `messages` plus generation parameters.
 
 Example local workflow:
 
@@ -72,7 +72,7 @@ or:
 viger-chat --local 127.0.0.1 8080
 ```
 
-llama.cpp's CLI also documents direct local generation options such as `--model`, `--prompt`, `--system-prompt`, and `--n-predict`; the server path is preferred here because it keeps one model process alive between turns. citeturn944338search0
+The server path is preferred to launching a fresh model process for every message because one runtime can keep the conversation context alive between requests.
 
 ## Provider requirements
 
@@ -98,7 +98,7 @@ A provider should:
 
 ## Tiny custom model path
 
-`python/train_tiny_chat.py` remains a research sandbox for a small byte-level Transformer. It is intentionally separate from the runtime adapter so we can replace it with a better tokenizer/model later without touching the conversation layer.
+`python/train_tiny_chat.py` remains a research sandbox for a small byte-level Transformer. `python/run_tiny_chat.py` can load its checkpoint and generate text locally. It is intentionally separate from the production provider adapter so a better model can replace it without touching the conversation layer.
 
 ## Future providers
 
