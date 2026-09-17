@@ -11,6 +11,7 @@ from pathlib import Path
 
 from PIL import Image
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.error import Conflict
 from telegram.ext import Application, CallbackQueryHandler, CommandHandler, ContextTypes, MessageHandler, filters
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -276,7 +277,12 @@ def main() -> None:
     application.add_handler(MessageHandler(filters.PHOTO | filters.Document.IMAGE, process_image))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, process_text))
     print("[VIGER] Python-only Telegram bot is running. Ctrl+C to stop.")
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    try:
+        application.run_polling(allowed_updates=Update.ALL_TYPES)
+    except Conflict:
+        print("[VIGER] ERROR: another VIGER bot instance is already using this token.")
+        print("[VIGER] Stop the old bot process/terminal, then run python run_bot.py again.")
+        raise SystemExit(2)
 
 
 if __name__ == "__main__":
