@@ -1,0 +1,61 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "VIGER SR — default",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "VIGER_SR_BUILD_TESTS": "ON",
+        "VIGER_SR_BUILD_CHAT": "ON",
+        "VIGER_SR_ENABLE_ONNX": "OFF"
+      }
+    },
+    {
+      "name": "neural",
+      "displayName": "VIGER SR — native ONNX",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/neural",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "VIGER_SR_BUILD_TESTS": "ON",
+        "VIGER_SR_BUILD_CHAT": "ON",
+        "VIGER_SR_ENABLE_ONNX": "ON",
+        "ONNXRUNTIME_ROOT": "$env{ONNXRUNTIME_ROOT}"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default"
+    },
+    {
+      "name": "neural",
+      "configurePreset": "neural"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "neural",
+      "configurePreset": "neural",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}
