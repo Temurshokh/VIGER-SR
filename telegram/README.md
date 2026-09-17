@@ -1,40 +1,43 @@
-# VIGER SR Telegram Bot
+# VIGER AI Telegram Bot
 
-Experimental Telegram interface for the native C++ `viger-sr` engine.
+Python-only experimental interface for VIGER SR and the self-trained TinyLM.
 
-## Windows: easiest start
+## Start
 
-1. Install Python 3 and CMake.
-2. Create a bot with `@BotFather` in Telegram using `/newbot`.
-3. Clone/pull VIGER-SR.
-4. Double-click `start_bot.bat` from this folder.
-5. Paste the BotFather token into the terminal.
-6. Open your bot, press `/start`, choose `2x` or `4x`, and send a photo.
+1. Install Python 3.10+.
+2. Create a bot with `@BotFather` using `/newbot` and copy the token.
+3. Open the VIGER-SR project in VS Code (or any Python editor).
+4. Run `run_bot.py`.
+5. Paste the token once. It is stored locally in `telegram/.bot_token` and ignored by git.
+6. Open the bot and press `/start`.
 
-`start_bot.bat` creates `.venv`, installs the Telegram package, builds the native engine if it cannot find `viger-sr.exe`, and starts long polling.
+The launcher checks Python dependencies and offers to install `requirements.txt`. There is no Visual Studio build step, no `.exe`, no CMake build, and no local model server.
 
-## PowerShell
-
-```powershell
-.\telegram\start_bot.ps1
-```
-
-## Existing engine
-
-Set the executable explicitly:
-
-```powershell
-$env:VIGER_SR_EXE="C:\path\to\viger-sr.exe"
-$env:VIGER_TELEGRAM_TOKEN="YOUR_BOT_TOKEN"
-python telegram\bot.py
-```
-
-The token is read from `VIGER_TELEGRAM_TOKEN`; it is not stored by the bot.
-
-## What the bot does
+## Use
 
 ```text
-Telegram -> bot.py -> viger-sr.exe -> PNG -> Telegram
+/photo  -> choose AI 2× or 4× -> send image
+/text   -> TinyLM generates a response
+/teach Hi => Hello!  -> add a training example
+/train  -> train the TinyLM from scratch again
+/voice on|off -> enable/disable speech replies
+/status -> show model/device state
 ```
 
-The bot currently exposes the existing native experimental reconstruction pipeline. It does not claim to use trained photographic SR weights unless the neural ONNX pipeline is explicitly wired in later.
+## Architecture
+
+```text
+Telegram
+   │
+   ├── photo ──> Python SR engine ──> Swin2SR ──> PNG ──> Telegram
+   │
+   └── text ───> TinyLM (GRU, trained from scratch) ──> text
+                                        │
+                                     corpus
+                                        │
+                                      train
+```
+
+Swin2SR is currently used as the image-quality experiment so real 2×/4× super-resolution works without compiling a native runtime. The language model is separate and is trained from scratch from `data/chat.txt` with learned weights only; it does not use a hard-coded fallback or an external chat server.
+
+For the first TinyLM experiment, keep expectations realistic: it is deliberately tiny and learns simple patterns from a small corpus. Add examples with `/teach`, then run `/train` to watch it improve.
