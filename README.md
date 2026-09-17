@@ -5,7 +5,7 @@
 VIGER SR is a Python-first Telegram AI experiment with two independent local inference systems:
 
 - 🖼️ **Image SR** — pretrained Swin2SR for 2× and 4× super-resolution, executed locally.
-- 🧠 **VIGER TinyGPT v3** — a small language model trained from scratch by this project.
+- 🧠 **VIGER TinyGPT v4** — a small language model trained from scratch by this project.
 
 The Telegram experiment does **not** require Visual Studio, CMake, C++, a native `.exe`, or a local LLM server.
 
@@ -51,10 +51,10 @@ Commands:
 /voice off
 /teach Hi => Hello!
 /train
-/train 3000
+/train 3500
 ```
 
-`/teach` adds a real training example to `data/chat.txt`. `/train` retrains the neural model from the updated corpus. Normal replies are generated from model weights; there is no hard-coded response dictionary.
+`/teach` adds a real training example to `data/chat.txt`. `/train` retrains the neural model from the current `.txt` corpus in `data/`, including the expanded English curriculum.
 
 For better image input quality, send the image as a **Telegram file/document** when possible. A normal Telegram chat photo may be compressed before VIGER receives it.
 
@@ -65,7 +65,7 @@ There are only two external connections in the normal experiment:
 1. **Telegram API** — required for the bot to receive your messages and send replies.
 2. **Hugging Face model download** — the first time an image SR model is used, its pretrained Swin2SR weights are downloaded. After that, the weights are reused from the local `.cache/huggingface` cache.
 
-There is **no remote text-model API** in VIGER TinyGPT. Its architecture, tokenizer, training loop, and learned weights are all local to this repository/runtime.
+There is **no remote text-model API** in VIGER TinyGPT. Its architecture, tokenizer, training loop, and learned weights are local to this project/runtime.
 
 ## Image super-resolution
 
@@ -98,7 +98,7 @@ The project performs this preprocessing itself with **PIL + NumPy + PyTorch**. `
 
 This is genuine neural super-resolution, but it is **not yet a VIGER-trained SR model**. The pretrained checkpoint is being used as the working image benchmark while we build the rest of the system. Training our own photographic SR model is a later stage and requires a substantially larger dataset and training budget.
 
-## VIGER TinyGPT v3
+## VIGER TinyGPT v4
 
 The language model is deliberately tiny and educational, but it is a real causal Transformer trained from scratch:
 
@@ -107,7 +107,7 @@ text corpus
    ↓
 self-trained byte-level BPE tokenizer
    ↓
-<User>/<Assistant>/<System>/<End> special tokens
+<SYSTEM>/<USER>/<ASSISTANT>/<END> special tokens
    ↓
 TinyGPT Transformer
    ↓
@@ -116,9 +116,23 @@ next-token probabilities
 generated response
 ```
 
+### English curriculum
+
+The training corpus is now much larger than the original toy set. `data/english_curriculum.txt` is automatically loaded together with `data/chat.txt`.
+
+It covers:
+
+- common nouns, verbs, adjectives, pronouns, prepositions, and colors;
+- definitions and example sentences;
+- singular/plural forms, articles, auxiliary verbs, negation, questions, and basic tense patterns;
+- synonyms, opposites, categories, simple facts, and small reasoning examples;
+- everyday conversation and requests for explanations.
+
+The goal is not to make a huge general-purpose model. The goal is to give a tiny model enough varied English structure to learn how words relate and how simple dialogue works.
+
 ### Tokenization
 
-The tokenizer starts with raw bytes, then learns frequent byte-pair merges from the corpus. This gives the model a vocabulary of reusable subword-like pieces while keeping a byte fallback for unseen words.
+The tokenizer starts with raw UTF-8 bytes, then learns frequent byte-pair merges from the whole local corpus. This creates reusable subword-like pieces while keeping byte fallback for unseen text.
 
 The special role tokens are learned as dedicated IDs:
 
@@ -129,7 +143,7 @@ The special role tokens are learned as dedicated IDs:
 <END>
 ```
 
-This means `User` and `Assistant` are not merely formatting in the input: the model is trained to treat the speaker roles as part of its sequence structure.
+This gives the model an explicit representation of conversation roles rather than relying only on plain text labels.
 
 ### Model
 
@@ -140,8 +154,11 @@ Embedding dimension : 160
 Transformer layers   : 4
 Attention heads      : 4
 Context length       : 192 tokens
-BPE merges           : up to 220
+BPE merges           : up to 320
+Minimum response    : 6 generated tokens
 ```
+
+The generator also prevents role-control tokens from appearing inside an answer and prevents an immediate `<END>`, which removes the previous empty-response failure mode.
 
 The checkpoint stores its architecture metadata, tokenizer merges, model version, and corpus hash. When the code or corpus changes, an old incompatible checkpoint is retrained instead of silently being reused.
 
@@ -156,7 +173,7 @@ Example:
 ```text
 /teach What is User? => User is the person who sends a message.
 /teach What is Assistant? => Assistant is the program that responds.
-/train 3000
+/train 3500
 ```
 
 The first command changes the actual corpus. The second trains the neural weights on that corpus. No response is inserted into a dictionary.
@@ -168,26 +185,25 @@ The first command changes the actual corpus. The second trains the neural weight
 ## Running model training directly
 
 ```bash
-python python/train_tiny_lm.py --steps 2200
+python -c "from pathlib import Path; from python.viger_tiny_lm import train; train(Path('data/chat.txt'), Path('artifacts/viger_tiny_lm.pt'), 3500)"
 ```
-
-The compatibility trainer now delegates to the same TinyGPT implementation used by the bot, so there is only one language-model architecture to maintain.
 
 ## Project structure
 
 ```text
 VIGER-SR/
 ├── python/
-│   ├── viger_tiny_lm.py   ← TinyGPT + BPE + training
-│   ├── sr_engine.py       ← local Swin2SR inference
-│   └── train_tiny_chat.py ← TinyGPT CLI wrapper
+│   ├── viger_tiny_lm.py    ← TinyGPT v4 + BPE + training
+│   ├── sr_engine.py        ← local Swin2SR inference
+│   └── train_tiny_chat.py  ← legacy training helper
 ├── telegram_bot/
-│   └── bot.py             ← Telegram interface
+│   └── bot.py              ← Telegram interface
 ├── data/
-│   └── chat.txt           ← language-model training corpus
-├── run_bot.py             ← one-command launcher
-├── run.py                 ← simple Python entry point
-└── requirements.txt       ← Python dependencies
+│   ├── chat.txt            ← project chat examples
+│   └── english_curriculum.txt  ← expanded English curriculum
+├── run_bot.py              ← one-command launcher
+├── run.py                  ← simple Python entry point
+└── requirements.txt        ← Python dependencies
 ```
 
 ## Design rule
