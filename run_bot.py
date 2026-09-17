@@ -10,34 +10,26 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 BOT = ROOT / "telegram" / "bot.py"
-REQ = ROOT / "telegram" / "requirements.txt"
+REQ = ROOT / "requirements.txt"
 TOKEN_FILE = ROOT / "telegram" / ".bot_token"
 
 
 def ensure_dependencies() -> None:
-    required = {
-        "telegram": "python-telegram-bot",
-        "PIL": "Pillow",
-        "torch": "torch",
-        "transformers": "transformers",
-        "pyttsx3": "pyttsx3",
-    }
+    required = ("telegram", "PIL", "torch", "transformers", "pyttsx3")
     missing: list[str] = []
-    for module, package in required.items():
+    for module in required:
         try:
             __import__(module)
         except ImportError:
-            missing.append(package)
+            missing.append(module)
 
     if not missing:
         return
 
     print("[VIGER] Missing Python packages:", ", ".join(missing))
-    if not REQ.exists():
-        raise SystemExit(f"Requirements file not found: {REQ}")
-    answer = input("Install them now? [Y/n]: ").strip().lower()
+    answer = input("Install project requirements now? [Y/n]: ").strip().lower()
     if answer not in {"", "y", "yes"}:
-        raise SystemExit("Install the requirements and run again.")
+        raise SystemExit("Install requirements.txt and run again.")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", str(REQ)])
 
 
@@ -56,7 +48,7 @@ def read_token() -> str:
         raise SystemExit("Telegram bot token is required.")
 
     TOKEN_FILE.write_text(token, encoding="utf-8")
-    print(f"[VIGER] Token saved locally to {TOKEN_FILE}")
+    print("[VIGER] Token saved locally. It is ignored by git.")
     return token
 
 
@@ -68,7 +60,7 @@ def main() -> None:
 
     ensure_dependencies()
     os.environ["VIGER_TELEGRAM_TOKEN"] = read_token()
-    print("[VIGER] Starting Python-only Telegram bot...")
+    print("[VIGER] Python-only Telegram bot starting...")
     runpy.run_path(str(BOT), run_name="__main__")
 
 
