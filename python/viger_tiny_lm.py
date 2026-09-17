@@ -19,7 +19,6 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT / "data" / "chat.txt"
 DEFAULT_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
 
-# Keep the vocabulary small while allowing both English and Russian experiments.
 CYRILLIC = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
 BASE_VOCAB = string.ascii_letters + string.digits + string.punctuation + " \n\t" + CYRILLIC
 
@@ -100,6 +99,12 @@ def _vocabulary(corpus: str) -> tuple[dict[str, int], list[str]]:
     return encode, chars
 
 
+def _attach_vocab(model: VigerTinyLM, decode: list[str]) -> VigerTinyLM:
+    model.viger_decode = decode
+    model.viger_encode = {char: index for index, char in enumerate(decode)}
+    return model
+
+
 def train(
     corpus_path: Path = DEFAULT_CORPUS,
     checkpoint: Path = DEFAULT_CHECKPOINT,
@@ -114,7 +119,7 @@ def train(
     encode, decode = _vocabulary(corpus)
     ids = torch.tensor([encode.get(ch, encode[" "]) for ch in corpus], dtype=torch.long)
 
-    block = min(96, len(ids) - 1)
+    block = min(96, len(ids) - 2)
     if block < 12:
         raise ValueError("The chat corpus is too small. Add more examples to data/chat.txt.")
 
@@ -160,8 +165,8 @@ def load_or_train(
 
     if checkpoint.exists():
         try:
-            package = torch.load(checkpoint, map_location=device)
-            decode = package["vocab"]
+            package = torch.load(checkpoint, map_location=device, weights_only=True)
+            decode = list(package["vocab"])
             model = VigerTinyLM(
                 vocab_size=len(decode),
                 embedding=int(package.get("embedding", 48)),
@@ -170,13 +175,13 @@ def load_or_train(
             model.load_state_dict(package["state_dict"])
             model.eval()
             print(f"[VIGER TinyLM] loaded learned weights from {checkpoint}")
-            return model
+            return _attach_vocab(model, decode)
         except Exception as exc:
-            print(f"[VIGER TinyLM] old checkpoint is incompatible; retraining: {exc}")
+            print(f"[VIGER TinyLM] checkpoint invalid; retraining from scratch: {exc}")
 
     train(corpus_path, checkpoint)
-    package = torch.load(checkpoint, map_location=device)
-    decode = package["vocab"]
+    package = torch.load(checkpoint, map_location=device, weights_only=True)
+    decode = list(package["vocab"])
     model = VigerTinyLM(
         vocab_size=len(decode),
         embedding=int(package.get("embedding", 48)),
@@ -184,22 +189,15 @@ def load_or_train(
     ).to(device)
     model.load_state_dict(package["state_dict"])
     model.eval()
-    return model
+    return _attach_vocab(model, decode)
 
 
 def answer(model: VigerTinyLM, user_text: str) -> str:
     user_text = user_text.strip()
     if not user_text:
         raise ValueError("Message is empty.")
-
-    checkpoint_model = model
-    # The vocabulary is stored in the checkpoint as decode IDs. Build the inverse map.
-    # This keeps inference independent from the training script and uses only learned weights.
-    # Accessing the vocabulary from the model is made explicit by attaching it below.
-    decode = getattr(checkpoint_model, "viger_decode", None)
-    encode = getattr(checkpoint_model, "viger_encode", None)
+    decode = getattr(model, "viger_decode", None)
+    encode = getattr(model, "viger_encode", None)
     if decode is None or encode is None:
-        raise RuntimeError("TinyLM vocabulary is not attached to the loaded model.")
-
-    prompt = f"User: {user_text}\nAssistant:"
-    return model.generate(prompt, encode, decode)
+        raise RuntimeError("TinyLM vocabulary is missing from the loaded model.")
+    return model.generate(f"User: {user_text}\nAssistant:", encode, decode)
