@@ -30,15 +30,45 @@ float sample(const RGB8& image, float x, float y, int c) {
          + (d * (1.0f - fx) + e * fx) * fy;
 }
 
+float cubic_weight(float x) {
+    // Catmull-Rom spline (a = -0.5), a useful sharp-but-stable image resampler.
+    x = std::fabs(x);
+    if (x <= 1.0f) {
+        return 1.5f * x * x * x - 2.5f * x * x + 1.0f;
+    }
+    if (x < 2.0f) {
+        return -0.5f * x * x * x + 2.5f * x * x - 4.0f * x + 2.0f;
+    }
+    return 0.0f;
+}
+
+float bicubic_sample(const RGB8& image, float x, float y, int c) {
+    const int base_x = static_cast<int>(std::floor(x));
+    const int base_y = static_cast<int>(std::floor(y));
+    float value = 0.0f;
+    float total_weight = 0.0f;
+
+    for (int oy = -1; oy <= 2; ++oy) {
+        const int sy = std::clamp(base_y + oy, 0, image.height() - 1);
+        const float wy = cubic_weight(y - static_cast<float>(base_y + oy));
+        for (int ox = -1; ox <= 2; ++ox) {
+            const int sx = std::clamp(base_x + ox, 0, image.width() - 1);
+            const float wx = cubic_weight(x - static_cast<float>(base_x + ox));
+            const float weight = wx * wy;
+            value += static_cast<float>(image.at(sx, sy, c)) * weight;
+            total_weight += weight;
+        }
+    }
+    return total_weight > 0.0f ? value / total_weight : 0.0f;
+}
+
 float luminance(const RGB8& image, int x, int y) {
     return 0.2126f * image.at(x, y, 0)
          + 0.7152f * image.at(x, y, 1)
          + 0.0722f * image.at(x, y, 2);
 }
 
-} // namespace
-
-RGB8 upscale_bilinear(const RGB8& input, int scale) {
+void validate_input(const RGB8& input, int scale) {
     if (input.empty()) {
         throw std::invalid_argument("Input image is empty");
     }
@@ -48,7 +78,12 @@ RGB8 upscale_bilinear(const RGB8& input, int scale) {
     if (scale < 1 || scale > 8) {
         throw std::invalid_argument("Scale must be between 1 and 8");
     }
+}
 
+} // namespace
+
+RGB8 upscale_bilinear(const RGB8& input, int scale) {
+    validate_input(input, scale);
     RGB8 output(input.width() * scale, input.height() * scale, 3);
 
     for (int y = 0; y < output.height(); ++y) {
@@ -60,7 +95,22 @@ RGB8 upscale_bilinear(const RGB8& input, int scale) {
             }
         }
     }
+    return output;
+}
 
+RGB8 upscale_bicubic(const RGB8& input, int scale) {
+    validate_input(input, scale);
+    RGB8 output(input.width() * scale, input.height() * scale, 3);
+
+    for (int y = 0; y < output.height(); ++y) {
+        const float source_y = static_cast<float>(y) / scale;
+        for (int x = 0; x < output.width(); ++x) {
+            const float source_x = static_cast<float>(x) / scale;
+            for (int c = 0; c < 3; ++c) {
+                output.at(x, y, c) = clamp_u8(bicubic_sample(input, source_x, source_y, c));
+            }
+        }
+    }
     return output;
 }
 
@@ -68,10 +118,12 @@ RGB8 edge_aware_sharpen(const RGB8& input, float amount) {
     if (input.empty()) {
         throw std::invalid_argument("Input image is empty");
     }
+    if (input.channels() != 3) {
+        throw std::invalid_argument("RGB8 image must have 3 channels");
+    }
     amount = std::clamp(amount, 0.0f, 2.0f);
 
     RGB8 output(input.width(), input.height(), 3);
-
     for (int y = 0; y < input.height(); ++y) {
         for (int x = 0; x < input.width(); ++x) {
             const int xm = std::max(0, x - 1);
@@ -91,12 +143,16 @@ RGB8 edge_aware_sharpen(const RGB8& input, float amount) {
             }
         }
     }
-
     return output;
 }
 
 RGB8 tiny_sr_baseline(const RGB8& input, int scale, float detail_amount) {
     auto enlarged = upscale_bilinear(input, scale);
+    return edge_aware_sharpen(enlarged, detail_amount);
+}
+
+RGB8 tiny_sr_bicubic_baseline(const RGB8& input, int scale, float detail_amount) {
+    auto enlarged = upscale_bicubic(input, scale);
     return edge_aware_sharpen(enlarged, detail_amount);
 }
 
