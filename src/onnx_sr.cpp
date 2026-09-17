@@ -1,8 +1,7 @@
 #include "viger_sr/onnx_sr.hpp"
 
-#include "viger_sr/image_ops.hpp"
-
 #include <algorithm>
+#include <array>
 #include <cstddef>
 #include <cstdint>
 #include <memory>
@@ -52,12 +51,7 @@ OnnxSRModel::OnnxSRModel(const std::filesystem::path& model_path)
     if (!std::filesystem::exists(model_path_)) {
         throw std::runtime_error("Model file does not exist: " + model_path_.string());
     }
-
-#ifdef VIGER_SR_HAS_ONNX
     impl_ = new Impl(model_path_);
-#else
-    impl_ = new Impl(model_path_);
-#endif
 }
 
 OnnxSRModel::~OnnxSRModel() {
@@ -96,9 +90,9 @@ RGB8 OnnxSRModel::enhance(const RGB8& upscaled) const {
     const std::int64_t height = upscaled.height();
     const std::int64_t width = upscaled.width();
     const std::array<std::int64_t, 4> shape{1, 3, height, width};
+    const std::size_t plane = static_cast<std::size_t>(width) * static_cast<std::size_t>(height);
 
-    std::vector<float> input_data(static_cast<std::size_t>(width * height * 3));
-    const std::size_t plane = static_cast<std::size_t>(width * height);
+    std::vector<float> input_data(plane * 3);
     for (int y = 0; y < upscaled.height(); ++y) {
         for (int x = 0; x < upscaled.width(); ++x) {
             const std::size_t p = static_cast<std::size_t>(y) * upscaled.width() + x;
@@ -110,11 +104,7 @@ RGB8 OnnxSRModel::enhance(const RGB8& upscaled) const {
 
     Ort::MemoryInfo memory_info("Cpu", OrtArenaAllocator, OrtMemTypeDefault);
     auto tensor = Ort::Value::CreateTensor<float>(
-        memory_info,
-        input_data.data(),
-        input_data.size(),
-        shape.data(),
-        shape.size());
+        memory_info, input_data.data(), input_data.size(), shape.data(), shape.size());
 
     const char* input_names[] = {impl_->input_name.c_str()};
     const char* output_names[] = {impl_->output_name.c_str()};
@@ -137,7 +127,8 @@ RGB8 OnnxSRModel::enhance(const RGB8& upscaled) const {
         for (int x = 0; x < result.width(); ++x) {
             const std::size_t p = static_cast<std::size_t>(y) * result.width() + x;
             for (int c = 0; c < 3; ++c) {
-                const float value = std::clamp(output_data[static_cast<std::size_t>(c) * plane + p], 0.0f, 1.0f);
+                const float value = std::clamp(
+                    output_data[static_cast<std::size_t>(c) * plane + p], 0.0f, 1.0f);
                 result.at(x, y, c) = static_cast<std::uint8_t>(value * 255.0f + 0.5f);
             }
         }
