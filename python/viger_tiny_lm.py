@@ -8,6 +8,7 @@ tokens teach the model the chat structure: SYSTEM, USER, ASSISTANT and END.
 
 from __future__ import annotations
 
+import hashlib
 import random
 import re
 from collections import Counter
@@ -21,7 +22,7 @@ from torch.nn import functional as F
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT / "data" / "chat.txt"
 DEFAULT_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
-MODEL_VERSION = 2
+MODEL_VERSION = 3
 
 SPECIAL_TOKENS = {
     "<SYSTEM>": 256,
@@ -39,6 +40,10 @@ SYSTEM_PROMPT = (
     "Assistant is the program that answers the user. "
     "Answer the user's message directly."
 )
+
+
+def corpus_hash(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 class TinyBPE:
@@ -207,7 +212,6 @@ class TinyGPT(nn.Module):
     def generate(
         self,
         tokens: torch.Tensor,
-        tokenizer: TinyBPE,
         max_new_tokens: int = 72,
         temperature: float = 0.7,
         top_k: int = 18,
@@ -304,6 +308,7 @@ def train(
     torch.save(
         {
             "model_version": MODEL_VERSION,
+            "corpus_hash": corpus_hash(corpus),
             "state_dict": model.state_dict(),
             "tokenizer_merges": tokenizer.to_state(),
             "vocab_size": tokenizer.vocab_size,
@@ -324,12 +329,16 @@ def load_or_train(
     corpus_path: Path = DEFAULT_CORPUS,
 ) -> tuple[TinyGPT, TinyBPE]:
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    corpus = _load_corpus(corpus_path)
+    current_hash = corpus_hash(corpus)
 
     if checkpoint.exists():
         try:
             package = torch.load(checkpoint, map_location=device, weights_only=True)
             if int(package.get("model_version", -1)) != MODEL_VERSION:
                 raise ValueError("old model version")
+            if package.get("corpus_hash") != current_hash:
+                raise ValueError("training corpus changed")
             tokenizer = TinyBPE(package["tokenizer_merges"])
             model = _make_model(tokenizer.vocab_size, package).to(device)
             model.load_state_dict(package["state_dict"])
@@ -340,7 +349,7 @@ def load_or_train(
             )
             return model, tokenizer
         except Exception as exc:
-            print(f"[VIGER TinyGPT] old/invalid checkpoint; retraining: {exc}")
+            print(f"[VIGER TinyGPT] checkpoint invalid/outdated; retraining: {exc}")
 
     train(corpus_path, checkpoint)
     package = torch.load(checkpoint, map_location=device, weights_only=True)
@@ -372,7 +381,7 @@ def answer(
         raise ValueError("Prompt tokenization produced no tokens.")
     device = next(model.parameters()).device
     tokens = torch.tensor(ids[-model.block :], dtype=torch.long, device=device).unsqueeze(0)
-    generated = model.generate(tokens, tokenizer)
+    generated = model.generate(tokens)
     text = tokenizer.decode(generated, keep_special=True)
     for marker in ("<END>", "<USER>", "<SYSTEM>", "<ASSISTANT>"):
         text = text.split(marker, 1)[0]
