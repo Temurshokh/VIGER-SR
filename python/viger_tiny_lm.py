@@ -1,9 +1,8 @@
 """TinyGPT + a self-trained byte-level BPE tokenizer.
 
-This is an educational local language model built from scratch. It does not call
-an external text model and it has no hard-coded fallback replies. The tokenizer
-learns frequent byte sequences from the training corpus, while special role
-tokens teach the model the chat structure: SYSTEM, USER, ASSISTANT and END.
+Educational local language-model experiment. No external text model is used.
+The tokenizer learns frequent byte sequences from the local corpus. Special
+role tokens teach the model that a User sends a message and an Assistant answers.
 """
 
 from __future__ import annotations
@@ -22,7 +21,7 @@ from torch.nn import functional as F
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT / "data" / "chat.txt"
 DEFAULT_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
-MODEL_VERSION = 3
+MODEL_VERSION = 4
 
 SPECIAL_TOKENS = {
     "<SYSTEM>": 256,
@@ -32,12 +31,14 @@ SPECIAL_TOKENS = {
 }
 BASE_VOCAB_SIZE = 260
 SPECIAL_PATTERN = re.compile(r"(<SYSTEM>|<USER>|<ASSISTANT>|<END>)")
+ROLE_TOKEN_IDS = {SPECIAL_TOKENS["<SYSTEM>"], SPECIAL_TOKENS["<USER>"], SPECIAL_TOKENS["<ASSISTANT>"]}
 
 SYSTEM_PROMPT = (
     "You are VIGER, a tiny local language model. "
     "You are brief, friendly, and helpful. "
     "User is the person who sends a message. "
-    "Assistant is the program that answers the user. "
+    "Assistant is the program that answers the User. "
+    "A word has meaning, and context helps determine meaning. "
     "Answer the user's message directly."
 )
 
@@ -47,7 +48,7 @@ def corpus_hash(text: str) -> str:
 
 
 class TinyBPE:
-    """Small self-contained byte-pair tokenizer with byte fallback."""
+    """Small byte-pair tokenizer with byte fallback and learned merges."""
 
     def __init__(self, merges: list[list[int]] | list[tuple[int, int]] | None = None) -> None:
         self.merges: list[tuple[int, int]] = [tuple(pair) for pair in (merges or [])]
@@ -78,7 +79,7 @@ class TinyBPE:
         return out
 
     @classmethod
-    def train(cls, text: str, max_merges: int = 220) -> "TinyBPE":
+    def train(cls, text: str, max_merges: int = 320) -> "TinyBPE":
         sequences: list[list[int]] = []
         for chunk in cls._chunks(text):
             if chunk in SPECIAL_TOKENS:
@@ -213,18 +214,27 @@ class TinyGPT(nn.Module):
         self,
         tokens: torch.Tensor,
         max_new_tokens: int = 72,
-        temperature: float = 0.7,
+        min_new_tokens: int = 6,
+        temperature: float = 0.72,
         top_k: int = 18,
     ) -> list[int]:
         self.eval()
         result = tokens.clone()
         recent: list[int] = []
-        for _ in range(max_new_tokens):
+        end_id = SPECIAL_TOKENS["<END>"]
+
+        for step in range(max_new_tokens):
             context = result[:, -self.block :]
             logits, _ = self(context)
             next_logits = logits[:, -1, :] / max(temperature, 0.05)
-            for token_id in set(recent[-32:]):
-                next_logits[0, token_id] -= 0.12
+
+            for token_id in ROLE_TOKEN_IDS:
+                next_logits[0, token_id] = float("-inf")
+            if step + 1 < min_new_tokens:
+                next_logits[0, end_id] = float("-inf")
+
+            for token_id in set(recent[-64:]):
+                next_logits[0, token_id] -= 0.15
 
             k = min(top_k, next_logits.shape[-1])
             values, indices = torch.topk(next_logits, k)
@@ -235,19 +245,30 @@ class TinyGPT(nn.Module):
             result = torch.cat([result, next_token], dim=1)
             recent.append(token_id)
 
-            if token_id in {
-                SPECIAL_TOKENS["<END>"],
-                SPECIAL_TOKENS["<USER>"],
-                SPECIAL_TOKENS["<SYSTEM>"],
-            }:
+            if token_id == end_id:
                 break
+
         return result[0, tokens.shape[1] :].tolist()
 
 
 def _load_corpus(path: Path) -> str:
-    text = path.read_text(encoding="utf-8", errors="ignore")
+    if not path.exists():
+        raise FileNotFoundError(f"Corpus not found: {path}")
+
+    paths = [path]
+    if path.parent.exists():
+        for extra in sorted(path.parent.glob("*.txt")):
+            if extra != path:
+                paths.append(extra)
+
+    chunks: list[str] = []
+    for corpus_path in paths:
+        text = corpus_path.read_text(encoding="utf-8", errors="ignore")
+        if text.strip():
+            chunks.append(text)
+    text = "\n\n".join(chunks)
     if not text.strip():
-        raise ValueError(f"Empty corpus: {path}")
+        raise ValueError("Training corpus is empty")
     return text
 
 
@@ -265,7 +286,7 @@ def _make_model(vocab_size: int, package: dict | None = None) -> TinyGPT:
 def train(
     corpus_path: Path = DEFAULT_CORPUS,
     checkpoint: Path = DEFAULT_CHECKPOINT,
-    steps: int = 2200,
+    steps: int = 3500,
 ) -> Path:
     random.seed(42)
     torch.manual_seed(42)
@@ -274,11 +295,11 @@ def train(
         torch.set_float32_matmul_precision("high")
 
     corpus = _load_corpus(corpus_path)
-    tokenizer = TinyBPE.train(corpus, max_merges=220)
+    tokenizer = TinyBPE.train(corpus, max_merges=320)
     ids = torch.tensor(tokenizer.encode(corpus), dtype=torch.long)
     block = min(192, len(ids) - 2)
     if block < 24:
-        raise ValueError("The chat corpus is too small. Add more examples to data/chat.txt.")
+        raise ValueError("The chat corpus is too small. Add more English examples.")
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = _make_model(tokenizer.vocab_size).to(device)
@@ -301,7 +322,7 @@ def train(
         nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
 
-        if (step + 1) % 200 == 0 or step == 0:
+        if (step + 1) % 250 == 0 or step == 0:
             print(f"[VIGER TinyGPT] step {step + 1}/{steps} loss={loss.item():.4f}")
 
     checkpoint.parent.mkdir(parents=True, exist_ok=True)
@@ -374,18 +395,14 @@ def answer(
     for old_user, old_assistant in (history or [])[-3:]:
         parts.append(f"<USER> {old_user.strip()} <ASSISTANT> {old_assistant.strip()}")
     parts.append(f"<USER> {user_text} <ASSISTANT>")
-    prompt = " ".join(parts)
-
-    ids = tokenizer.encode(prompt)
+    ids = tokenizer.encode(" ".join(parts))
     if not ids:
         raise ValueError("Prompt tokenization produced no tokens.")
+
     device = next(model.parameters()).device
     tokens = torch.tensor(ids[-model.block :], dtype=torch.long, device=device).unsqueeze(0)
     generated = model.generate(tokens)
-    text = tokenizer.decode(generated, keep_special=True)
-    for marker in ("<END>", "<USER>", "<SYSTEM>", "<ASSISTANT>"):
-        text = text.split(marker, 1)[0]
-    text = text.strip()
+    text = tokenizer.decode(generated, keep_special=False).strip()
     if not text:
         raise RuntimeError("TinyGPT generated an empty response.")
     return text
