@@ -50,7 +50,8 @@ public:
         int timeout_ms = 120000;
     };
 
-    explicit LocalHttpChatModel(Config config = {});
+    LocalHttpChatModel();
+    explicit LocalHttpChatModel(Config config);
 
     [[nodiscard]] std::string generate(
         const std::vector<Message>& history,
