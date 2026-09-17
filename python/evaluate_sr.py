@@ -29,9 +29,11 @@ def psnr(reference: np.ndarray, candidate: np.ndarray) -> float:
 def box_filter(image: np.ndarray, radius: int) -> np.ndarray:
     if radius <= 0:
         return image
-    padded = np.pad(image, ((radius, radius), (radius, radius)), mode="reflect")
-    integral = padded.cumsum(axis=0).cumsum(axis=1)
+
     size = 2 * radius + 1
+    padded = np.pad(image, ((radius, radius), (radius, radius)), mode="reflect")
+    integral = np.pad(padded, ((1, 0), (1, 0)), mode="constant").cumsum(axis=0).cumsum(axis=1)
+
     return (
         integral[size:, size:]
         - integral[:-size, size:]
