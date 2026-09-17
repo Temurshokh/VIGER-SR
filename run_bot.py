@@ -19,17 +19,47 @@ def venv_python() -> Path:
     return ROOT / ".venv" / "bin" / "python"
 
 
+def run_python(python: Path, *args: str) -> None:
+    subprocess.check_call([str(python), *args])
+
+
+def verify_ai_stack(python: Path) -> None:
+    probe = (
+        "import torch, torchvision, transformers; "
+        "from transformers import AutoImageProcessor, Swin2SRForImageSuperResolution; "
+        "import PIL, telegram"
+    )
+    try:
+        run_python(python, "-c", probe)
+        return
+    except subprocess.CalledProcessError:
+        print("[VIGER] AI package check failed; repairing the PyTorch/vision stack...")
+
+    run_python(
+        python,
+        "-m",
+        "pip",
+        "install",
+        "--upgrade",
+        "--force-reinstall",
+        "torch",
+        "torchvision",
+    )
+    run_python(python, "-c", probe)
+
+
 def ensure_venv() -> Path:
     python = venv_python()
     if not python.exists():
         print("[VIGER] Creating local Python environment...")
-        subprocess.check_call([sys.executable, "-m", "venv", str(ROOT / ".venv")])
+        run_python(sys.executable, "-m", "venv", str(ROOT / ".venv"))
 
     if not REQ.exists():
         raise SystemExit(f"Requirements file not found: {REQ}")
 
-    print("[VIGER] Checking Python dependencies...")
-    subprocess.check_call([str(python), "-m", "pip", "install", "-r", str(REQ)])
+    print("[VIGER] Installing/checking Python dependencies...")
+    run_python(python, "-m", "pip", "install", "--upgrade", "-r", str(REQ))
+    verify_ai_stack(python)
     return python
 
 
