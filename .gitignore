@@ -9,3 +9,5 @@ artifacts/
 .bot_token
 .DS_Store
 data/user_learning.txt
+data/english_1m.txt
+
