@@ -31,7 +31,7 @@ def _load_blocks() -> list[str]:
     if not KNOWLEDGE_FILE.exists():
         return []
     text = KNOWLEDGE_FILE.read_text(encoding="utf-8", errors="ignore")
-    blocks = re.split(r"\n\s*\n", text)
+    blocks = text.split("\n\n")
     return [block.strip() for block in blocks if block.strip()]
 
 
