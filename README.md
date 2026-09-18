@@ -5,7 +5,7 @@
 VIGER SR is a Python-first Telegram AI experiment with two independent local inference systems:
 
 - 🖼️ **Image SR** — pretrained Swin2SR for 2× and 4× super-resolution, executed locally.
-- 🧠 **VIGER TinyGPT v5** — a ~5M-parameter language model trained from scratch by this project.
+- 🧠 **VIGEROID 6** — the current ~5M-parameter language model trained from scratch by this project.
 
 The Telegram experiment does **not** require Visual Studio, CMake, C++, a native `.exe`, or a local LLM server.
 
@@ -37,7 +37,7 @@ Telegram
    │
    ├── 📷 photo ──> Python SR engine ──> Swin2SR ──> enhanced image
    │
-   └── 💬 text ───> VIGER TinyGPT v5 ───> generated text
+   └── 💬 text ───> VIGEROID 6 ───> generated text
 ```
 
 Commands:
@@ -55,9 +55,13 @@ Commands:
 /train 5000
 /train 8000
 /train new 5000
+/benchmark
+/model
+/knowledge on
+/train new 5000
 ```
 
-`/teach` adds a supervised example to `data/chat.txt`. `/learn on` stores your normal text messages in the local `data/user_learning.txt` corpus so you can feed the model larger language samples without manually writing `/teach` for every line.
+`/teach` adds a supervised example to `data/chat.txt`. `/learn on` stores your normal text messages in the local `data/user_learning.txt` corpus so you can feed the model larger language samples without manually writing `/teach` for every line. `/knowledge on` enables an offline lexical retriever over `data/knowledge_base.txt`; this adds temporary context to the prompt but does not modify the model weights.
 
 ## What connects to the internet?
 
@@ -133,7 +137,7 @@ Current language sources include:
 
 This is a **C1-oriented language corpus plus a broad factual knowledge pack**, not a claim that a 5M model will reach CEFR C1. The goal is to expose the model to richer language structure and a wider set of factual concepts.
 
-### V5 architecture
+### VIGEROID 6 architecture
 
 Current defaults:
 
@@ -165,7 +169,7 @@ Training:
 - cosine learning-rate decay;
 - deterministic seed for reproducible experiments.
 
-The checkpoint stores the architecture metadata, tokenizer merges, model version, corpus hash, parameter count, and training steps. A separate local recovery checkpoint stores optimizer and RNG state every 500 steps, so an interrupted CPU run can resume instead of losing hours of computation.
+The checkpoint stores the architecture metadata, tokenizer merges, model version, corpus hash, parameter count, and training steps. A separate local recovery checkpoint stores optimizer and RNG state every 500 steps, so an interrupted CPU run can resume instead of losing hours of computation. The Telegram bot can also inspect the checkpoint and run a fixed local latency benchmark without retraining.
 
 ### 1.3M → 5M → 10M → 20M
 
@@ -194,6 +198,10 @@ VIGER ~20M
 ```
 
 Each size should be evaluated on the same fixed test prompts so improvements can be compared.
+
+## Local knowledge assist
+
+VIGEROID can optionally retrieve a few relevant passages from the local `knowledge_base.txt` when a message looks like a factual question. This is an offline retrieval layer, not web search and not weight training. It is useful for testing factual grounding while keeping the model small.
 
 ## Voice
 
