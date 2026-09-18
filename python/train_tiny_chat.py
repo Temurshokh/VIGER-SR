@@ -24,7 +24,7 @@ def main() -> None:
         type=Path,
         default=ROOT / "artifacts" / "viger_tiny_lm.pt",
     )
-    parser.add_argument("--steps", type=int, default=2200)
+    parser.add_argument("--steps", type=int, default=5000)
     args = parser.parse_args()
 
     if len(args.data) == 1:
@@ -33,7 +33,10 @@ def main() -> None:
         corpus = ROOT / "artifacts" / "combined_chat_corpus.txt"
         corpus.parent.mkdir(parents=True, exist_ok=True)
         corpus.write_text(
-            "\n\n".join(path.read_text(encoding="utf-8", errors="ignore") for path in args.data),
+            "\n\n".join(
+                path.read_text(encoding="utf-8", errors="ignore")
+                for path in args.data
+            ),
             encoding="utf-8",
         )
 
