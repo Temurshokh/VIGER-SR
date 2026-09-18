@@ -10,4 +10,6 @@ artifacts/
 .DS_Store
 data/user_learning.txt
 data/english_1m.txt
+data/english_quality_2m.txt
+artifacts/vigeroid_6*.pt
 
