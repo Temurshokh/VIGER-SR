@@ -127,9 +127,10 @@ Current language sources include:
 - `english_curriculum.txt` — core vocabulary, grammar, sentence patterns, and simple reasoning;
 - `english_natural_c1.txt` — everyday dialogue, contractions, casual phrases, phrasal verbs, short stories, history, technical explanations, and natural conversation;
 - `english_advanced_c1.txt` — C1-oriented discourse, uncertainty, polite disagreement, register changes, idioms, nuanced explanations, narrative prose, and advanced grammar;
+- `knowledge_base.txt` — a broad factual knowledge pack covering physics, chemistry, biology, astronomy, Earth science, mathematics, computing, AI, history, geography, and everyday concepts;
 - `user_learning.txt` — optional local material collected with `/learn on`.
 
-This is a **C1-oriented corpus**, not a claim that a 5M model will reach CEFR C1. The goal is to expose the model to much richer language structure.
+This is a **C1-oriented language corpus plus a broad factual knowledge pack**, not a claim that a 5M model will reach CEFR C1. The goal is to expose the model to richer language structure and a wider set of factual concepts.
 
 ### V5 architecture
 
@@ -210,7 +211,8 @@ VIGER-SR/
 │   ├── chat.txt               ← project chat examples
 │   ├── english_curriculum.txt ← core English
 │   ├── english_natural_c1.txt ← natural conversation + stories
-│   ├── english_advanced_c1.txt← advanced English
+│   ├── english_advanced_c1.txt ← advanced English
+│   └── knowledge_base.txt      ← factual knowledge
 │   └── user_learning.txt      ← local user corpus, ignored by Git
 ├── run_bot.py                 ← one-command launcher
 ├── run.py                     ← simple Python entry point
