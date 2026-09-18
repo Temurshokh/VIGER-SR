@@ -26,7 +26,8 @@ DEFAULT_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
 RESUME_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm_resume.pt"
 TRAINING_STATUS = ROOT / "artifacts" / "training_status.json"
 
-MODEL_VERSION = 5
+MODEL_VERSION = 5  # checkpoint format/architecture version; display name is VIGEROID 6
+MODEL_NAME = "VIGEROID 6"
 MODEL_DIM = 256
 MODEL_LAYERS = 6
 MODEL_HEADS = 8
@@ -691,6 +692,7 @@ def answer(
     bundle: tuple[TinyGPT, TinyBPE],
     user_text: str,
     history: list[tuple[str, str]] | None = None,
+    knowledge_context: str = "",
 ) -> str:
     model, tokenizer = bundle
     user_text = user_text.strip()
@@ -698,6 +700,12 @@ def answer(
         raise ValueError("Message is empty.")
 
     parts = [f"<SYSTEM> {SYSTEM_PROMPT}"]
+    if knowledge_context.strip():
+        parts.append(
+            "<SYSTEM> Local knowledge notes are optional reference material. "
+            "Use them when relevant, but do not copy their labels.\n"
+            f"{knowledge_context.strip()}\n<END>"
+        )
     for old_user, old_assistant in (history or [])[-3:]:
         parts.append(
             f"<USER> {old_user.strip()} <ASSISTANT> {old_assistant.strip()}"
@@ -723,4 +731,4 @@ def answer(
 
 
 if __name__ == "__main__":
-    print("VIGER TinyGPT v5 trainer. Use /train in Telegram or import train().")
+    print(f"{MODEL_NAME} trainer. Use /train in Telegram or import train().")
