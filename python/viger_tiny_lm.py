@@ -501,7 +501,40 @@ def train(
                         f"using {RESUME_CHECKPOINT.name}"
                     )
         except Exception as exc:
-            print(f"[VIGER TinyGPT] resume state ignored: {exc}")
+            print(f"[VIGER TinyGPT] recovery state ignored: {exc}")
+
+    # V5 was already capable of producing a final checkpoint before recovery
+    # checkpoints were introduced. If such a compatible final model exists,
+    # continue from its learned weights rather than throwing away a long run.
+    if resume and not resumed and checkpoint.exists():
+        try:
+            package = torch.load(
+                checkpoint,
+                map_location=device,
+                weights_only=True,
+            )
+            compatible = (
+                int(package.get("model_version", -1)) == MODEL_VERSION
+                and package.get("corpus_hash") == current_hash
+                and int(package.get("vocab_size", -1)) == tokenizer.vocab_size
+                and int(package.get("dim", -1)) == MODEL_DIM
+                and int(package.get("layers", -1)) == MODEL_LAYERS
+                and int(package.get("heads", -1)) == MODEL_HEADS
+                and int(package.get("block", -1)) == MODEL_BLOCK
+            )
+            trained_steps = int(package.get("training_steps", 0))
+            if compatible and trained_steps > 0:
+                model = _make_model(tokenizer.vocab_size, package).to(device)
+                model.load_state_dict(package["state_dict"])
+                start_step = min(trained_steps, steps)
+                resumed = start_step > 0
+                if resumed:
+                    print(
+                        f"[VIGER TinyGPT] continuing from final checkpoint "
+                        f"at step {start_step}/{steps}; optimizer starts fresh"
+                    )
+        except Exception as exc:
+            print(f"[VIGER TinyGPT] final checkpoint resume ignored: {exc}")
 
     parameter_count = sum(p.numel() for p in model.parameters())
     print(
