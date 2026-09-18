@@ -1,0 +1,3903 @@
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Light in vacuum travels at exactly 299,792,458 meters per second. The speed is defined by the SI system.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Light in vacuum travels at exactly 299,792,458 meters per second. The speed is defined by the SI system.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Light in vacuum travels at exactly 299,792,458 meters per second. In simple terms, the speed is defined by the SI system.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Light in vacuum travels at exactly 299,792,458 meters per second. The speed is defined by the SI system. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Gravity near Earth's surface gives a freely falling object an acceleration of about 9.8 meters per second squared, although the exact value varies slightly by location.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Gravity near Earth's surface gives a freely falling object an acceleration of about 9.8 meters per second squared, although the exact value varies slightly by location.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Gravity near Earth's surface gives a freely falling object an acceleration of about 9.8 meters per second squared, although the exact value varies slightly by location.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Gravity near Earth's surface gives a freely falling object an acceleration of about 9.8 meters per second squared, although the exact value varies slightly by location. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Mass measures the amount of matter in an object, while weight is the force of gravity acting on that mass.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Mass measures the amount of matter in an object, while weight is the force of gravity acting on that mass.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Mass measures the amount of matter in an object, while weight is the force of gravity acting on that mass.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Mass measures the amount of matter in an object, while weight is the force of gravity acting on that mass. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Force is measured in newtons. One newton is the force needed to accelerate one kilogram by one meter per second squared.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Force is measured in newtons. One newton is the force needed to accelerate one kilogram by one meter per second squared.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Force is measured in newtons. One newton is the force needed to accelerate one kilogram by one meter per second squared.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Force is measured in newtons. One newton is the force needed to accelerate one kilogram by one meter per second squared. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Energy cannot be created or destroyed in an isolated system; it is transferred or transformed between forms.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Energy cannot be created or destroyed in an isolated system; it is transferred or transformed between forms.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Energy cannot be created or destroyed in an isolated system; it is transferred or transformed between forms.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Energy cannot be created or destroyed in an isolated system; it is transferred or transformed between forms. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Kinetic energy is the energy of motion. Its classical value is one half times mass times velocity squared.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Kinetic energy is the energy of motion. Its classical value is one half times mass times velocity squared.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Kinetic energy is the energy of motion. Its classical value is one half times mass times velocity squared.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Kinetic energy is the energy of motion. Its classical value is one half times mass times velocity squared. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Potential energy is stored energy associated with position, configuration, or other physical conditions.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Potential energy is stored energy associated with position, configuration, or other physical conditions.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Potential energy is stored energy associated with position, configuration, or other physical conditions.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Potential energy is stored energy associated with position, configuration, or other physical conditions. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Momentum equals mass multiplied by velocity. In an isolated system, total momentum is conserved.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Momentum equals mass multiplied by velocity. In an isolated system, total momentum is conserved.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Momentum equals mass multiplied by velocity. In an isolated system, total momentum is conserved.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Momentum equals mass multiplied by velocity. In an isolated system, total momentum is conserved. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Temperature measures the thermal state of matter and is related to the average microscopic motion of particles.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Temperature measures the thermal state of matter and is related to the average microscopic motion of particles.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Temperature measures the thermal state of matter and is related to the average microscopic motion of particles.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Temperature measures the thermal state of matter and is related to the average microscopic motion of particles. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Sound is a mechanical wave that needs a material medium, such as air, water, or a solid, to propagate.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Sound is a mechanical wave that needs a material medium, such as air, water, or a solid, to propagate.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Sound is a mechanical wave that needs a material medium, such as air, water, or a solid, to propagate.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Sound is a mechanical wave that needs a material medium, such as air, water, or a solid, to propagate. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Sound generally travels faster through solids than through liquids, and faster through liquids than through gases.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Sound generally travels faster through solids than through liquids, and faster through liquids than through gases.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Sound generally travels faster through solids than through liquids, and faster through liquids than through gases.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Sound generally travels faster through solids than through liquids, and faster through liquids than through gases. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Frequency is the number of cycles of a periodic process per second and is measured in hertz.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Frequency is the number of cycles of a periodic process per second and is measured in hertz.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Frequency is the number of cycles of a periodic process per second and is measured in hertz.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Frequency is the number of cycles of a periodic process per second and is measured in hertz. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Wavelength is the distance between corresponding points on neighboring cycles of a wave.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Wavelength is the distance between corresponding points on neighboring cycles of a wave.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Wavelength is the distance between corresponding points on neighboring cycles of a wave.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Wavelength is the distance between corresponding points on neighboring cycles of a wave. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+A vacuum contains extremely little matter, so ordinary sound cannot travel through an ideal vacuum.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A vacuum contains extremely little matter, so ordinary sound cannot travel through an ideal vacuum.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A vacuum contains extremely little matter, so ordinary sound cannot travel through an ideal vacuum.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A vacuum contains extremely little matter, so ordinary sound cannot travel through an ideal vacuum. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Electric current is the rate at which electric charge flows through a circuit.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Electric current is the rate at which electric charge flows through a circuit.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Electric current is the rate at which electric charge flows through a circuit.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Electric current is the rate at which electric charge flows through a circuit. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Voltage is electric potential difference. It describes how much energy per unit charge is available to drive current.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Voltage is electric potential difference. It describes how much energy per unit charge is available to drive current.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Voltage is electric potential difference. It describes how much energy per unit charge is available to drive current.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Voltage is electric potential difference. It describes how much energy per unit charge is available to drive current. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Resistance describes how strongly a material or component opposes electric current.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Resistance describes how strongly a material or component opposes electric current.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Resistance describes how strongly a material or component opposes electric current.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Resistance describes how strongly a material or component opposes electric current. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Ohm's law relates voltage, current, and resistance through V equals I times R for ohmic components under appropriate conditions.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Ohm's law relates voltage, current, and resistance through V equals I times R for ohmic components under appropriate conditions.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Ohm's law relates voltage, current, and resistance through V equals I times R for ohmic components under appropriate conditions.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Ohm's law relates voltage, current, and resistance through V equals I times R for ohmic components under appropriate conditions. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+A conductor allows electric charge to move relatively easily, while an insulator strongly resists charge movement.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A conductor allows electric charge to move relatively easily, while an insulator strongly resists charge movement.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A conductor allows electric charge to move relatively easily, while an insulator strongly resists charge movement.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A conductor allows electric charge to move relatively easily, while an insulator strongly resists charge movement. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Magnetism and electricity are linked parts of electromagnetism. Changing electric fields and magnetic fields can influence each other.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Magnetism and electricity are linked parts of electromagnetism. Changing electric fields and magnetic fields can influence each other.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Magnetism and electricity are linked parts of electromagnetism. Changing electric fields and magnetic fields can influence each other.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Magnetism and electricity are linked parts of electromagnetism. Changing electric fields and magnetic fields can influence each other. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+An atom has a dense nucleus containing protons and neutrons, surrounded by electrons in quantum states.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An atom has a dense nucleus containing protons and neutrons, surrounded by electrons in quantum states.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An atom has a dense nucleus containing protons and neutrons, surrounded by electrons in quantum states.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An atom has a dense nucleus containing protons and neutrons, surrounded by electrons in quantum states. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+The atomic number of an element equals the number of protons in its nucleus.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The atomic number of an element equals the number of protons in its nucleus.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the atomic number of an element equals the number of protons in its nucleus.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The atomic number of an element equals the number of protons in its nucleus. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Isotopes are atoms of the same element with different numbers of neutrons.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Isotopes are atoms of the same element with different numbers of neutrons.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Isotopes are atoms of the same element with different numbers of neutrons.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Isotopes are atoms of the same element with different numbers of neutrons. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Electrons have a negative electric charge, protons have a positive charge, and neutrons have no net electric charge.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Electrons have a negative electric charge, protons have a positive charge, and neutrons have no net electric charge.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Electrons have a negative electric charge, protons have a positive charge, and neutrons have no net electric charge.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Electrons have a negative electric charge, protons have a positive charge, and neutrons have no net electric charge. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Photons are quantum particles associated with electromagnetic radiation. They have no rest mass.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Photons are quantum particles associated with electromagnetic radiation. They have no rest mass.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Photons are quantum particles associated with electromagnetic radiation. They have no rest mass.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Photons are quantum particles associated with electromagnetic radiation. They have no rest mass. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+The visible part of the electromagnetic spectrum is only a small portion of all electromagnetic radiation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The visible part of the electromagnetic spectrum is only a small portion of all electromagnetic radiation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the visible part of the electromagnetic spectrum is only a small portion of all electromagnetic radiation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The visible part of the electromagnetic spectrum is only a small portion of all electromagnetic radiation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays are all forms of electromagnetic radiation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays are all forms of electromagnetic radiation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays are all forms of electromagnetic radiation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays are all forms of electromagnetic radiation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+The laws of classical mechanics describe many everyday motions, while relativity and quantum mechanics are needed for other regimes.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The laws of classical mechanics describe many everyday motions, while relativity and quantum mechanics are needed for other regimes.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the laws of classical mechanics describe many everyday motions, while relativity and quantum mechanics are needed for other regimes.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The laws of classical mechanics describe many everyday motions, while relativity and quantum mechanics are needed for other regimes. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Special relativity states that the laws of physics are the same in all inertial reference frames and that light in vacuum has the same speed for all such observers.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Special relativity states that the laws of physics are the same in all inertial reference frames and that light in vacuum has the same speed for all such observers.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Special relativity states that the laws of physics are the same in all inertial reference frames and that light in vacuum has the same speed for all such observers.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Special relativity states that the laws of physics are the same in all inertial reference frames and that light in vacuum has the same speed for all such observers. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Physics. Treat this as factual background information and use the surrounding wording as context. <END>
+Quantum mechanics describes physical systems at very small scales and uses probabilities to predict measurement outcomes.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Quantum mechanics describes physical systems at very small scales and uses probabilities to predict measurement outcomes.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Quantum mechanics describes physical systems at very small scales and uses probabilities to predict measurement outcomes.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Quantum mechanics describes physical systems at very small scales and uses probabilities to predict measurement outcomes. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+The periodic table organizes chemical elements primarily by atomic number and groups elements with related properties.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The periodic table organizes chemical elements primarily by atomic number and groups elements with related properties.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the periodic table organizes chemical elements primarily by atomic number and groups elements with related properties.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The periodic table organizes chemical elements primarily by atomic number and groups elements with related properties. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Hydrogen has atomic number 1, meaning that a neutral hydrogen atom has one proton.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Hydrogen has atomic number 1, meaning that a neutral hydrogen atom has one proton.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Hydrogen has atomic number 1, meaning that a neutral hydrogen atom has one proton.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Hydrogen has atomic number 1, meaning that a neutral hydrogen atom has one proton. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Oxygen has atomic number 8. Neutral oxygen atoms have eight protons and eight electrons.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Oxygen has atomic number 8. Neutral oxygen atoms have eight protons and eight electrons.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Oxygen has atomic number 8. Neutral oxygen atoms have eight protons and eight electrons.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Oxygen has atomic number 8. Neutral oxygen atoms have eight protons and eight electrons. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Carbon has atomic number 6 and can form four covalent bonds in many common molecules.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Carbon has atomic number 6 and can form four covalent bonds in many common molecules.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Carbon has atomic number 6 and can form four covalent bonds in many common molecules.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Carbon has atomic number 6 and can form four covalent bonds in many common molecules. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Water is H2O, so each water molecule contains two hydrogen atoms and one oxygen atom.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Water is H2O, so each water molecule contains two hydrogen atoms and one oxygen atom.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Water is H2O, so each water molecule contains two hydrogen atoms and one oxygen atom.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Water is H2O, so each water molecule contains two hydrogen atoms and one oxygen atom. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Carbon dioxide is CO2. One molecule contains one carbon atom and two oxygen atoms.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Carbon dioxide is CO2. One molecule contains one carbon atom and two oxygen atoms.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Carbon dioxide is CO2. One molecule contains one carbon atom and two oxygen atoms.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Carbon dioxide is CO2. One molecule contains one carbon atom and two oxygen atoms. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Oxygen is essential for aerobic respiration in many organisms and also supports combustion.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Oxygen is essential for aerobic respiration in many organisms and also supports combustion.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Oxygen is essential for aerobic respiration in many organisms and also supports combustion.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Oxygen is essential for aerobic respiration in many organisms and also supports combustion. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+A molecule is a group of atoms held together by chemical bonds and acting as a distinct chemical unit.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A molecule is a group of atoms held together by chemical bonds and acting as a distinct chemical unit.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A molecule is a group of atoms held together by chemical bonds and acting as a distinct chemical unit.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A molecule is a group of atoms held together by chemical bonds and acting as a distinct chemical unit. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+An ion is an atom or molecule with a net electric charge because it has gained or lost electrons.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An ion is an atom or molecule with a net electric charge because it has gained or lost electrons.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An ion is an atom or molecule with a net electric charge because it has gained or lost electrons.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An ion is an atom or molecule with a net electric charge because it has gained or lost electrons. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+A chemical reaction changes one set of substances into another by breaking and forming chemical bonds.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A chemical reaction changes one set of substances into another by breaking and forming chemical bonds.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A chemical reaction changes one set of substances into another by breaking and forming chemical bonds.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A chemical reaction changes one set of substances into another by breaking and forming chemical bonds. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+A catalyst changes the rate of a chemical reaction without being consumed overall by the reaction.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A catalyst changes the rate of a chemical reaction without being consumed overall by the reaction.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A catalyst changes the rate of a chemical reaction without being consumed overall by the reaction.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A catalyst changes the rate of a chemical reaction without being consumed overall by the reaction. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+An acid donates protons in the Brønsted-Lowry definition, while a base accepts protons.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An acid donates protons in the Brønsted-Lowry definition, while a base accepts protons.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An acid donates protons in the Brønsted-Lowry definition, while a base accepts protons.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An acid donates protons in the Brønsted-Lowry definition, while a base accepts protons. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+pH is a logarithmic measure related to hydrogen ion activity in a solution. Lower pH generally indicates greater acidity.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> pH is a logarithmic measure related to hydrogen ion activity in a solution. Lower pH generally indicates greater acidity.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> pH is a logarithmic measure related to hydrogen ion activity in a solution. Lower pH generally indicates greater acidity.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> pH is a logarithmic measure related to hydrogen ion activity in a solution. Lower pH generally indicates greater acidity. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Sodium chloride is commonly known as table salt and has the chemical formula NaCl.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Sodium chloride is commonly known as table salt and has the chemical formula NaCl.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Sodium chloride is commonly known as table salt and has the chemical formula NaCl.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Sodium chloride is commonly known as table salt and has the chemical formula NaCl. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Rusting is a form of corrosion in which iron reacts with oxygen and moisture to form iron oxides and related products.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Rusting is a form of corrosion in which iron reacts with oxygen and moisture to form iron oxides and related products.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Rusting is a form of corrosion in which iron reacts with oxygen and moisture to form iron oxides and related products.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Rusting is a form of corrosion in which iron reacts with oxygen and moisture to form iron oxides and related products. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+The three common states of matter are solid, liquid, and gas. Plasma is another state found in many hot or energetic environments.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The three common states of matter are solid, liquid, and gas. Plasma is another state found in many hot or energetic environments.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the three common states of matter are solid, liquid, and gas. Plasma is another state found in many hot or energetic environments.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The three common states of matter are solid, liquid, and gas. Plasma is another state found in many hot or energetic environments. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Melting changes a solid into a liquid by adding enough energy to overcome the conditions holding the solid structure.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Melting changes a solid into a liquid by adding enough energy to overcome the conditions holding the solid structure.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Melting changes a solid into a liquid by adding enough energy to overcome the conditions holding the solid structure.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Melting changes a solid into a liquid by adding enough energy to overcome the conditions holding the solid structure. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Boiling occurs throughout a liquid when its vapor pressure reaches the surrounding pressure.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Boiling occurs throughout a liquid when its vapor pressure reaches the surrounding pressure.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Boiling occurs throughout a liquid when its vapor pressure reaches the surrounding pressure.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Boiling occurs throughout a liquid when its vapor pressure reaches the surrounding pressure. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Evaporation is a surface process in which some liquid particles escape into the gas phase.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Evaporation is a surface process in which some liquid particles escape into the gas phase.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Evaporation is a surface process in which some liquid particles escape into the gas phase.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Evaporation is a surface process in which some liquid particles escape into the gas phase. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Chemistry. Treat this as factual background information and use the surrounding wording as context. <END>
+Density is mass divided by volume.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Density is mass divided by volume.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Density is mass divided by volume.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Density is mass divided by volume. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Cells are the basic structural and functional units of life.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Cells are the basic structural and functional units of life.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Cells are the basic structural and functional units of life.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Cells are the basic structural and functional units of life. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Prokaryotic cells lack a membrane-bound nucleus, while eukaryotic cells have a nucleus surrounded by a membrane.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Prokaryotic cells lack a membrane-bound nucleus, while eukaryotic cells have a nucleus surrounded by a membrane.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Prokaryotic cells lack a membrane-bound nucleus, while eukaryotic cells have a nucleus surrounded by a membrane.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Prokaryotic cells lack a membrane-bound nucleus, while eukaryotic cells have a nucleus surrounded by a membrane. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+DNA stores hereditary information in most living organisms. Its sequence is built from four main nucleotide bases.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> DNA stores hereditary information in most living organisms. Its sequence is built from four main nucleotide bases.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> DNA stores hereditary information in most living organisms. Its sequence is built from four main nucleotide bases.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> DNA stores hereditary information in most living organisms. Its sequence is built from four main nucleotide bases. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+RNA can carry genetic information and can also perform structural or catalytic roles in cells.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> RNA can carry genetic information and can also perform structural or catalytic roles in cells.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> RNA can carry genetic information and can also perform structural or catalytic roles in cells.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> RNA can carry genetic information and can also perform structural or catalytic roles in cells. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Proteins are chains of amino acids folded into structures that allow them to perform many biological functions.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Proteins are chains of amino acids folded into structures that allow them to perform many biological functions.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Proteins are chains of amino acids folded into structures that allow them to perform many biological functions.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Proteins are chains of amino acids folded into structures that allow them to perform many biological functions. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Enzymes are biological catalysts that speed up chemical reactions by lowering activation energy.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Enzymes are biological catalysts that speed up chemical reactions by lowering activation energy.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Enzymes are biological catalysts that speed up chemical reactions by lowering activation energy.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Enzymes are biological catalysts that speed up chemical reactions by lowering activation energy. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Photosynthesis allows plants, algae, and some microorganisms to convert light energy into chemical energy.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Photosynthesis allows plants, algae, and some microorganisms to convert light energy into chemical energy.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Photosynthesis allows plants, algae, and some microorganisms to convert light energy into chemical energy.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Photosynthesis allows plants, algae, and some microorganisms to convert light energy into chemical energy. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+In photosynthesis, carbon dioxide and water are used to produce carbohydrates, with oxygen released in oxygenic photosynthesis.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> In photosynthesis, carbon dioxide and water are used to produce carbohydrates, with oxygen released in oxygenic photosynthesis.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In photosynthesis, carbon dioxide and water are used to produce carbohydrates, with oxygen released in oxygenic photosynthesis.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> In photosynthesis, carbon dioxide and water are used to produce carbohydrates, with oxygen released in oxygenic photosynthesis. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Cellular respiration extracts usable energy from food molecules. Aerobic respiration commonly uses oxygen as a final electron acceptor.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Cellular respiration extracts usable energy from food molecules. Aerobic respiration commonly uses oxygen as a final electron acceptor.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Cellular respiration extracts usable energy from food molecules. Aerobic respiration commonly uses oxygen as a final electron acceptor.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Cellular respiration extracts usable energy from food molecules. Aerobic respiration commonly uses oxygen as a final electron acceptor. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Mitochondria are organelles that play a major role in aerobic energy metabolism in eukaryotic cells.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Mitochondria are organelles that play a major role in aerobic energy metabolism in eukaryotic cells.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Mitochondria are organelles that play a major role in aerobic energy metabolism in eukaryotic cells.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Mitochondria are organelles that play a major role in aerobic energy metabolism in eukaryotic cells. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Ribosomes are cellular structures that build proteins by reading messenger RNA.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Ribosomes are cellular structures that build proteins by reading messenger RNA.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Ribosomes are cellular structures that build proteins by reading messenger RNA.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Ribosomes are cellular structures that build proteins by reading messenger RNA. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+The cell membrane is a selectively permeable barrier that helps regulate what enters and leaves a cell.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The cell membrane is a selectively permeable barrier that helps regulate what enters and leaves a cell.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the cell membrane is a selectively permeable barrier that helps regulate what enters and leaves a cell.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The cell membrane is a selectively permeable barrier that helps regulate what enters and leaves a cell. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+The immune system protects the body from many pathogens and abnormal cells through coordinated cellular and molecular responses.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The immune system protects the body from many pathogens and abnormal cells through coordinated cellular and molecular responses.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the immune system protects the body from many pathogens and abnormal cells through coordinated cellular and molecular responses.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The immune system protects the body from many pathogens and abnormal cells through coordinated cellular and molecular responses. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Vaccines train the immune system to recognize specific targets without requiring the disease itself in the way a natural infection does.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Vaccines train the immune system to recognize specific targets without requiring the disease itself in the way a natural infection does.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Vaccines train the immune system to recognize specific targets without requiring the disease itself in the way a natural infection does.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Vaccines train the immune system to recognize specific targets without requiring the disease itself in the way a natural infection does. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+A virus is a biological entity that requires a host cell to replicate. Viruses contain genetic material enclosed in a protein structure and sometimes a lipid envelope.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A virus is a biological entity that requires a host cell to replicate. Viruses contain genetic material enclosed in a protein structure and sometimes a lipid envelope.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A virus is a biological entity that requires a host cell to replicate. Viruses contain genetic material enclosed in a protein structure and sometimes a lipid envelope.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A virus is a biological entity that requires a host cell to replicate. Viruses contain genetic material enclosed in a protein structure and sometimes a lipid envelope. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Bacteria are single-celled prokaryotic organisms. Some are harmful, while many are harmless or beneficial.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Bacteria are single-celled prokaryotic organisms. Some are harmful, while many are harmless or beneficial.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Bacteria are single-celled prokaryotic organisms. Some are harmful, while many are harmless or beneficial.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Bacteria are single-celled prokaryotic organisms. Some are harmful, while many are harmless or beneficial. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Fungi are eukaryotic organisms that include yeasts, molds, and mushrooms. They obtain nutrients by absorbing organic material.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Fungi are eukaryotic organisms that include yeasts, molds, and mushrooms. They obtain nutrients by absorbing organic material.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Fungi are eukaryotic organisms that include yeasts, molds, and mushrooms. They obtain nutrients by absorbing organic material.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Fungi are eukaryotic organisms that include yeasts, molds, and mushrooms. They obtain nutrients by absorbing organic material. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Plants use roots, stems, and leaves as major structures, although their forms vary greatly between species.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Plants use roots, stems, and leaves as major structures, although their forms vary greatly between species.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Plants use roots, stems, and leaves as major structures, although their forms vary greatly between species.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Plants use roots, stems, and leaves as major structures, although their forms vary greatly between species. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Animals are multicellular eukaryotes that obtain energy by consuming or absorbing organic matter.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Animals are multicellular eukaryotes that obtain energy by consuming or absorbing organic matter.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Animals are multicellular eukaryotes that obtain energy by consuming or absorbing organic matter.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Animals are multicellular eukaryotes that obtain energy by consuming or absorbing organic matter. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Natural selection changes populations over generations when heritable traits affect survival or reproductive success in a particular environment.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Natural selection changes populations over generations when heritable traits affect survival or reproductive success in a particular environment.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Natural selection changes populations over generations when heritable traits affect survival or reproductive success in a particular environment.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Natural selection changes populations over generations when heritable traits affect survival or reproductive success in a particular environment. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Evolution is the change in inherited characteristics of populations across generations.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Evolution is the change in inherited characteristics of populations across generations.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Evolution is the change in inherited characteristics of populations across generations.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Evolution is the change in inherited characteristics of populations across generations. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Genes are regions of genetic material that contribute to inherited biological information.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Genes are regions of genetic material that contribute to inherited biological information.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Genes are regions of genetic material that contribute to inherited biological information.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Genes are regions of genetic material that contribute to inherited biological information. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+A mutation is a change in genetic material. Its effect can be neutral, harmful, beneficial, or context-dependent.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A mutation is a change in genetic material. Its effect can be neutral, harmful, beneficial, or context-dependent.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A mutation is a change in genetic material. Its effect can be neutral, harmful, beneficial, or context-dependent.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A mutation is a change in genetic material. Its effect can be neutral, harmful, beneficial, or context-dependent. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+The human adult skeleton normally has 206 bones, although the exact count can vary slightly between individuals because some bones may fuse or remain separate.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The human adult skeleton normally has 206 bones, although the exact count can vary slightly between individuals because some bones may fuse or remain separate.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the human adult skeleton normally has 206 bones, although the exact count can vary slightly between individuals because some bones may fuse or remain separate.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The human adult skeleton normally has 206 bones, although the exact count can vary slightly between individuals because some bones may fuse or remain separate. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+The human heart has four chambers: two atria and two ventricles.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The human heart has four chambers: two atria and two ventricles.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the human heart has four chambers: two atria and two ventricles.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The human heart has four chambers: two atria and two ventricles. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+The lungs exchange gases between inhaled air and blood. Oxygen enters the blood while carbon dioxide leaves it.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The lungs exchange gases between inhaled air and blood. Oxygen enters the blood while carbon dioxide leaves it.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the lungs exchange gases between inhaled air and blood. Oxygen enters the blood while carbon dioxide leaves it.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The lungs exchange gases between inhaled air and blood. Oxygen enters the blood while carbon dioxide leaves it. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+Neurons are specialized cells that transmit electrical and chemical signals in nervous systems.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Neurons are specialized cells that transmit electrical and chemical signals in nervous systems.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Neurons are specialized cells that transmit electrical and chemical signals in nervous systems.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Neurons are specialized cells that transmit electrical and chemical signals in nervous systems. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Biology. Treat this as factual background information and use the surrounding wording as context. <END>
+The brain is part of the central nervous system along with the spinal cord.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The brain is part of the central nervous system along with the spinal cord.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the brain is part of the central nervous system along with the spinal cord.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The brain is part of the central nervous system along with the spinal cord. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+The Sun is a star at the center of the Solar System.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Sun is a star at the center of the Solar System.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Sun is a star at the center of the Solar System.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Sun is a star at the center of the Solar System. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Earth orbits the Sun once in about 365.25 days, which is why a leap-year system is used to keep calendars aligned with the seasons.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earth orbits the Sun once in about 365.25 days, which is why a leap-year system is used to keep calendars aligned with the seasons.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earth orbits the Sun once in about 365.25 days, which is why a leap-year system is used to keep calendars aligned with the seasons.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earth orbits the Sun once in about 365.25 days, which is why a leap-year system is used to keep calendars aligned with the seasons. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Earth rotates once relative to distant stars in about 23 hours 56 minutes, while a solar day is about 24 hours on average.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earth rotates once relative to distant stars in about 23 hours 56 minutes, while a solar day is about 24 hours on average.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earth rotates once relative to distant stars in about 23 hours 56 minutes, while a solar day is about 24 hours on average.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earth rotates once relative to distant stars in about 23 hours 56 minutes, while a solar day is about 24 hours on average. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+The Moon is Earth's natural satellite and is tidally locked, so roughly the same side faces Earth most of the time.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Moon is Earth's natural satellite and is tidally locked, so roughly the same side faces Earth most of the time.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Moon is Earth's natural satellite and is tidally locked, so roughly the same side faces Earth most of the time.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Moon is Earth's natural satellite and is tidally locked, so roughly the same side faces Earth most of the time. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+The phases of the Moon are caused by changing illumination geometry as the Moon orbits Earth.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The phases of the Moon are caused by changing illumination geometry as the Moon orbits Earth.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the phases of the Moon are caused by changing illumination geometry as the Moon orbits Earth.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The phases of the Moon are caused by changing illumination geometry as the Moon orbits Earth. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+A solar eclipse occurs when the Moon passes between Earth and the Sun and, from some locations, blocks some or all of the Sun's disk.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A solar eclipse occurs when the Moon passes between Earth and the Sun and, from some locations, blocks some or all of the Sun's disk.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A solar eclipse occurs when the Moon passes between Earth and the Sun and, from some locations, blocks some or all of the Sun's disk.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A solar eclipse occurs when the Moon passes between Earth and the Sun and, from some locations, blocks some or all of the Sun's disk. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+A lunar eclipse occurs when Earth passes between the Sun and Moon and the Moon moves through Earth's shadow.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A lunar eclipse occurs when Earth passes between the Sun and Moon and the Moon moves through Earth's shadow.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A lunar eclipse occurs when Earth passes between the Sun and Moon and the Moon moves through Earth's shadow.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A lunar eclipse occurs when Earth passes between the Sun and Moon and the Moon moves through Earth's shadow. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Mercury is the closest planet to the Sun and the smallest of the eight planets.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Mercury is the closest planet to the Sun and the smallest of the eight planets.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Mercury is the closest planet to the Sun and the smallest of the eight planets.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Mercury is the closest planet to the Sun and the smallest of the eight planets. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Venus has a very thick carbon-dioxide-rich atmosphere and a surface hotter than Mercury despite being farther from the Sun.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Venus has a very thick carbon-dioxide-rich atmosphere and a surface hotter than Mercury despite being farther from the Sun.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Venus has a very thick carbon-dioxide-rich atmosphere and a surface hotter than Mercury despite being farther from the Sun.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Venus has a very thick carbon-dioxide-rich atmosphere and a surface hotter than Mercury despite being farther from the Sun. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Earth is the only planet currently known to host life.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earth is the only planet currently known to host life.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earth is the only planet currently known to host life.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earth is the only planet currently known to host life. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Mars is often called the Red Planet because iron minerals on its surface give it a reddish appearance.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Mars is often called the Red Planet because iron minerals on its surface give it a reddish appearance.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Mars is often called the Red Planet because iron minerals on its surface give it a reddish appearance.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Mars is often called the Red Planet because iron minerals on its surface give it a reddish appearance. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Jupiter is the largest planet in the Solar System.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Jupiter is the largest planet in the Solar System.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Jupiter is the largest planet in the Solar System.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Jupiter is the largest planet in the Solar System. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Saturn is famous for its extensive ring system, which is made mostly of ice particles with rock and dust.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Saturn is famous for its extensive ring system, which is made mostly of ice particles with rock and dust.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Saturn is famous for its extensive ring system, which is made mostly of ice particles with rock and dust.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Saturn is famous for its extensive ring system, which is made mostly of ice particles with rock and dust. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Uranus rotates with an extreme axial tilt of about 98 degrees, making its seasonal geometry unusual.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Uranus rotates with an extreme axial tilt of about 98 degrees, making its seasonal geometry unusual.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Uranus rotates with an extreme axial tilt of about 98 degrees, making its seasonal geometry unusual.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Uranus rotates with an extreme axial tilt of about 98 degrees, making its seasonal geometry unusual. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Neptune is the farthest recognized planet from the Sun in the modern eight-planet Solar System.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Neptune is the farthest recognized planet from the Sun in the modern eight-planet Solar System.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Neptune is the farthest recognized planet from the Sun in the modern eight-planet Solar System.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Neptune is the farthest recognized planet from the Sun in the modern eight-planet Solar System. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+A light-year is a unit of distance: the distance light travels in one Julian year, about 9.46 trillion kilometers.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A light-year is a unit of distance: the distance light travels in one Julian year, about 9.46 trillion kilometers.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A light-year is a unit of distance: the distance light travels in one Julian year, about 9.46 trillion kilometers.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A light-year is a unit of distance: the distance light travels in one Julian year, about 9.46 trillion kilometers. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+A galaxy is a gravitationally bound system containing stars, gas, dust, dark matter, and other components.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A galaxy is a gravitationally bound system containing stars, gas, dust, dark matter, and other components.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A galaxy is a gravitationally bound system containing stars, gas, dust, dark matter, and other components.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A galaxy is a gravitationally bound system containing stars, gas, dust, dark matter, and other components. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+The Milky Way is the galaxy that contains the Solar System.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Milky Way is the galaxy that contains the Solar System.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Milky Way is the galaxy that contains the Solar System.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Milky Way is the galaxy that contains the Solar System. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Black holes are regions of spacetime where gravity is so strong that, inside the event horizon, nothing can escape to the outside at sublight speed.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Black holes are regions of spacetime where gravity is so strong that, inside the event horizon, nothing can escape to the outside at sublight speed.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Black holes are regions of spacetime where gravity is so strong that, inside the event horizon, nothing can escape to the outside at sublight speed.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Black holes are regions of spacetime where gravity is so strong that, inside the event horizon, nothing can escape to the outside at sublight speed. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+A supernova is a powerful stellar explosion or related catastrophic stellar event.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A supernova is a powerful stellar explosion or related catastrophic stellar event.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A supernova is a powerful stellar explosion or related catastrophic stellar event.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A supernova is a powerful stellar explosion or related catastrophic stellar event. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Astronomy. Treat this as factual background information and use the surrounding wording as context. <END>
+Neutron stars are extremely dense stellar remnants composed primarily of neutron-rich matter.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Neutron stars are extremely dense stellar remnants composed primarily of neutron-rich matter.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Neutron stars are extremely dense stellar remnants composed primarily of neutron-rich matter.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Neutron stars are extremely dense stellar remnants composed primarily of neutron-rich matter. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Earth has a layered internal structure commonly described as the crust, mantle, outer core, and inner core.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earth has a layered internal structure commonly described as the crust, mantle, outer core, and inner core.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earth has a layered internal structure commonly described as the crust, mantle, outer core, and inner core.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earth has a layered internal structure commonly described as the crust, mantle, outer core, and inner core. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Earth's outer core is liquid, while the inner core is solid under the pressures and temperatures at Earth's center.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earth's outer core is liquid, while the inner core is solid under the pressures and temperatures at Earth's center.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earth's outer core is liquid, while the inner core is solid under the pressures and temperatures at Earth's center.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earth's outer core is liquid, while the inner core is solid under the pressures and temperatures at Earth's center. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Tectonic plates are large pieces of Earth's lithosphere that move over the softer asthenosphere.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Tectonic plates are large pieces of Earth's lithosphere that move over the softer asthenosphere.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Tectonic plates are large pieces of Earth's lithosphere that move over the softer asthenosphere.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Tectonic plates are large pieces of Earth's lithosphere that move over the softer asthenosphere. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Earthquakes occur when accumulated stress in rocks is released, often along faults.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earthquakes occur when accumulated stress in rocks is released, often along faults.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earthquakes occur when accumulated stress in rocks is released, often along faults.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earthquakes occur when accumulated stress in rocks is released, often along faults. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Volcanoes form where magma reaches the surface or where geological processes allow molten material to rise.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Volcanoes form where magma reaches the surface or where geological processes allow molten material to rise.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Volcanoes form where magma reaches the surface or where geological processes allow molten material to rise.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Volcanoes form where magma reaches the surface or where geological processes allow molten material to rise. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+The water cycle includes evaporation, condensation, precipitation, infiltration, runoff, and other transfers of water.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The water cycle includes evaporation, condensation, precipitation, infiltration, runoff, and other transfers of water.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the water cycle includes evaporation, condensation, precipitation, infiltration, runoff, and other transfers of water.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The water cycle includes evaporation, condensation, precipitation, infiltration, runoff, and other transfers of water. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Clouds form when moist air cools enough for water vapor to condense or deposit on particles.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Clouds form when moist air cools enough for water vapor to condense or deposit on particles.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Clouds form when moist air cools enough for water vapor to condense or deposit on particles.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Clouds form when moist air cools enough for water vapor to condense or deposit on particles. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Weather describes short-term atmospheric conditions, while climate describes longer-term statistical patterns.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Weather describes short-term atmospheric conditions, while climate describes longer-term statistical patterns.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Weather describes short-term atmospheric conditions, while climate describes longer-term statistical patterns.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Weather describes short-term atmospheric conditions, while climate describes longer-term statistical patterns. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Wind is air moving from one region to another, driven mainly by pressure differences and influenced by Earth's rotation and surface friction.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Wind is air moving from one region to another, driven mainly by pressure differences and influenced by Earth's rotation and surface friction.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Wind is air moving from one region to another, driven mainly by pressure differences and influenced by Earth's rotation and surface friction.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Wind is air moving from one region to another, driven mainly by pressure differences and influenced by Earth's rotation and surface friction. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+The ozone layer in the stratosphere absorbs much of the Sun's harmful ultraviolet radiation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The ozone layer in the stratosphere absorbs much of the Sun's harmful ultraviolet radiation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the ozone layer in the stratosphere absorbs much of the Sun's harmful ultraviolet radiation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The ozone layer in the stratosphere absorbs much of the Sun's harmful ultraviolet radiation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Earth's atmosphere is mostly nitrogen and oxygen, with smaller amounts of argon, carbon dioxide, water vapor, and other gases.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Earth's atmosphere is mostly nitrogen and oxygen, with smaller amounts of argon, carbon dioxide, water vapor, and other gases.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Earth's atmosphere is mostly nitrogen and oxygen, with smaller amounts of argon, carbon dioxide, water vapor, and other gases.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Earth's atmosphere is mostly nitrogen and oxygen, with smaller amounts of argon, carbon dioxide, water vapor, and other gases. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+The greenhouse effect is the warming produced when atmospheric gases absorb and re-emit some outgoing infrared radiation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The greenhouse effect is the warming produced when atmospheric gases absorb and re-emit some outgoing infrared radiation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the greenhouse effect is the warming produced when atmospheric gases absorb and re-emit some outgoing infrared radiation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The greenhouse effect is the warming produced when atmospheric gases absorb and re-emit some outgoing infrared radiation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Ocean tides are caused mainly by the gravitational effects of the Moon and Sun, combined with Earth's rotation and basin geometry.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Ocean tides are caused mainly by the gravitational effects of the Moon and Sun, combined with Earth's rotation and basin geometry.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Ocean tides are caused mainly by the gravitational effects of the Moon and Sun, combined with Earth's rotation and basin geometry.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Ocean tides are caused mainly by the gravitational effects of the Moon and Sun, combined with Earth's rotation and basin geometry. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+The Pacific Ocean is the largest ocean on Earth by area.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Pacific Ocean is the largest ocean on Earth by area.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Pacific Ocean is the largest ocean on Earth by area.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Pacific Ocean is the largest ocean on Earth by area. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Earth science. Treat this as factual background information and use the surrounding wording as context. <END>
+Antarctica is the southernmost continent and is covered by a vast ice sheet.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Antarctica is the southernmost continent and is covered by a vast ice sheet.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Antarctica is the southernmost continent and is covered by a vast ice sheet.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Antarctica is the southernmost continent and is covered by a vast ice sheet. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+Zero is an integer and an even number. It represents the absence of quantity in many counting contexts.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Zero is an integer and an even number. It represents the absence of quantity in many counting contexts.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Zero is an integer and an even number. It represents the absence of quantity in many counting contexts.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Zero is an integer and an even number. It represents the absence of quantity in many counting contexts. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A prime number greater than one has exactly two positive divisors: one and itself.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A prime number greater than one has exactly two positive divisors: one and itself.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A prime number greater than one has exactly two positive divisors: one and itself.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A prime number greater than one has exactly two positive divisors: one and itself. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+Two is the only even prime number.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Two is the only even prime number.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Two is the only even prime number.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Two is the only even prime number. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+The decimal representation of pi begins 3.14159 and continues indefinitely without repeating as a finite cycle.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The decimal representation of pi begins 3.14159 and continues indefinitely without repeating as a finite cycle.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the decimal representation of pi begins 3.14159 and continues indefinitely without repeating as a finite cycle.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The decimal representation of pi begins 3.14159 and continues indefinitely without repeating as a finite cycle. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+The circumference of a circle equals 2 times pi times its radius.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The circumference of a circle equals 2 times pi times its radius.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the circumference of a circle equals 2 times pi times its radius.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The circumference of a circle equals 2 times pi times its radius. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+The area of a circle equals pi times the square of its radius.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The area of a circle equals pi times the square of its radius.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the area of a circle equals pi times the square of its radius.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The area of a circle equals pi times the square of its radius. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A right triangle satisfies the Pythagorean theorem: a squared plus b squared equals c squared, where c is the hypotenuse.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A right triangle satisfies the Pythagorean theorem: a squared plus b squared equals c squared, where c is the hypotenuse.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A right triangle satisfies the Pythagorean theorem: a squared plus b squared equals c squared, where c is the hypotenuse.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A right triangle satisfies the Pythagorean theorem: a squared plus b squared equals c squared, where c is the hypotenuse. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A fraction represents a ratio of two integers when the denominator is nonzero.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A fraction represents a ratio of two integers when the denominator is nonzero.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A fraction represents a ratio of two integers when the denominator is nonzero.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A fraction represents a ratio of two integers when the denominator is nonzero. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A percentage is a ratio expressed per hundred.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A percentage is a ratio expressed per hundred.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A percentage is a ratio expressed per hundred.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A percentage is a ratio expressed per hundred. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+The mean of a set of numbers is the sum divided by the number of values.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The mean of a set of numbers is the sum divided by the number of values.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the mean of a set of numbers is the sum divided by the number of values.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The mean of a set of numbers is the sum divided by the number of values. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+The median is the middle value after a dataset is ordered, or the average of the two middle values for an even number of observations.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The median is the middle value after a dataset is ordered, or the average of the two middle values for an even number of observations.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the median is the middle value after a dataset is ordered, or the average of the two middle values for an even number of observations.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The median is the middle value after a dataset is ordered, or the average of the two middle values for an even number of observations. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+Probability measures uncertainty on a scale from 0 to 1, where 0 means impossible and 1 means certain in the modeled setting.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Probability measures uncertainty on a scale from 0 to 1, where 0 means impossible and 1 means certain in the modeled setting.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Probability measures uncertainty on a scale from 0 to 1, where 0 means impossible and 1 means certain in the modeled setting.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Probability measures uncertainty on a scale from 0 to 1, where 0 means impossible and 1 means certain in the modeled setting. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A function maps each allowed input to exactly one output.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A function maps each allowed input to exactly one output.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A function maps each allowed input to exactly one output.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A function maps each allowed input to exactly one output. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+An equation states that two expressions have the same value.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An equation states that two expressions have the same value.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An equation states that two expressions have the same value.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An equation states that two expressions have the same value. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A variable is a symbol used to represent a value that can change or is not yet specified.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A variable is a symbol used to represent a value that can change or is not yet specified.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A variable is a symbol used to represent a value that can change or is not yet specified.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A variable is a symbol used to represent a value that can change or is not yet specified. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A vector has both magnitude and direction, while a scalar has magnitude without direction.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A vector has both magnitude and direction, while a scalar has magnitude without direction.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A vector has both magnitude and direction, while a scalar has magnitude without direction.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A vector has both magnitude and direction, while a scalar has magnitude without direction. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A matrix is a rectangular array of numbers or other mathematical objects.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A matrix is a rectangular array of numbers or other mathematical objects.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A matrix is a rectangular array of numbers or other mathematical objects.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A matrix is a rectangular array of numbers or other mathematical objects. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+The derivative describes an instantaneous rate of change. Geometrically, it is the slope of a curve at a point when the derivative exists.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The derivative describes an instantaneous rate of change. Geometrically, it is the slope of a curve at a point when the derivative exists.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the derivative describes an instantaneous rate of change. Geometrically, it is the slope of a curve at a point when the derivative exists.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The derivative describes an instantaneous rate of change. Geometrically, it is the slope of a curve at a point when the derivative exists. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+An integral can represent accumulated quantity or signed area, depending on the context.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An integral can represent accumulated quantity or signed area, depending on the context.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An integral can represent accumulated quantity or signed area, depending on the context.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An integral can represent accumulated quantity or signed area, depending on the context. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Mathematics. Treat this as factual background information and use the surrounding wording as context. <END>
+A logarithm answers the question: to what exponent must a base be raised to produce a given number?
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A logarithm answers the question: to what exponent must a base be raised to produce a given number?
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A logarithm answers the question: to what exponent must a base be raised to produce a given number?
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A logarithm answers the question: to what exponent must a base be raised to produce a given number? This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A computer program is a sequence of instructions that a processor or runtime can execute.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A computer program is a sequence of instructions that a processor or runtime can execute.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A computer program is a sequence of instructions that a processor or runtime can execute.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A computer program is a sequence of instructions that a processor or runtime can execute. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A CPU executes instructions and performs arithmetic, logic, control, and data-movement operations.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A CPU executes instructions and performs arithmetic, logic, control, and data-movement operations.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A CPU executes instructions and performs arithmetic, logic, control, and data-movement operations.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A CPU executes instructions and performs arithmetic, logic, control, and data-movement operations. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A GPU is designed for highly parallel workloads and is widely used for graphics and machine learning.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A GPU is designed for highly parallel workloads and is widely used for graphics and machine learning.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A GPU is designed for highly parallel workloads and is widely used for graphics and machine learning.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A GPU is designed for highly parallel workloads and is widely used for graphics and machine learning. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+RAM is volatile memory used for data and programs that are actively being processed.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> RAM is volatile memory used for data and programs that are actively being processed.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> RAM is volatile memory used for data and programs that are actively being processed.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> RAM is volatile memory used for data and programs that are actively being processed. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+An SSD stores data using flash memory and has no moving disk platters.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An SSD stores data using flash memory and has no moving disk platters.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An SSD stores data using flash memory and has no moving disk platters.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An SSD stores data using flash memory and has no moving disk platters. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A hard disk drive stores data magnetically on rotating platters.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A hard disk drive stores data magnetically on rotating platters.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A hard disk drive stores data magnetically on rotating platters.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A hard disk drive stores data magnetically on rotating platters. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+An operating system manages hardware resources and provides services used by applications.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An operating system manages hardware resources and provides services used by applications.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An operating system manages hardware resources and provides services used by applications.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An operating system manages hardware resources and provides services used by applications. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A process is a running instance of a program with its own execution state and resources.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A process is a running instance of a program with its own execution state and resources.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A process is a running instance of a program with its own execution state and resources.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A process is a running instance of a program with its own execution state and resources. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A thread is a sequence of execution within a process. A process can contain multiple threads.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A thread is a sequence of execution within a process. A process can contain multiple threads.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A thread is a sequence of execution within a process. A process can contain multiple threads.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A thread is a sequence of execution within a process. A process can contain multiple threads. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A file system organizes persistent data into files and directories or similar structures.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A file system organizes persistent data into files and directories or similar structures.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A file system organizes persistent data into files and directories or similar structures.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A file system organizes persistent data into files and directories or similar structures. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A byte contains eight bits in modern computing systems.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A byte contains eight bits in modern computing systems.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A byte contains eight bits in modern computing systems.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A byte contains eight bits in modern computing systems. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A bit is a binary digit that can represent zero or one.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A bit is a binary digit that can represent zero or one.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A bit is a binary digit that can represent zero or one.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A bit is a binary digit that can represent zero or one. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+Binary represents information using a base-two numeral system.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Binary represents information using a base-two numeral system.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Binary represents information using a base-two numeral system.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Binary represents information using a base-two numeral system. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+Hexadecimal uses sixteen symbols, typically 0 through 9 and A through F.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Hexadecimal uses sixteen symbols, typically 0 through 9 and A through F.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Hexadecimal uses sixteen symbols, typically 0 through 9 and A through F.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Hexadecimal uses sixteen symbols, typically 0 through 9 and A through F. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+UTF-8 is a variable-length encoding for Unicode that is compatible with ASCII for the first 128 code points.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> UTF-8 is a variable-length encoding for Unicode that is compatible with ASCII for the first 128 code points.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> UTF-8 is a variable-length encoding for Unicode that is compatible with ASCII for the first 128 code points.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> UTF-8 is a variable-length encoding for Unicode that is compatible with ASCII for the first 128 code points. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+An IP address identifies a network interface or endpoint using an Internet Protocol addressing scheme.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An IP address identifies a network interface or endpoint using an Internet Protocol addressing scheme.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An IP address identifies a network interface or endpoint using an Internet Protocol addressing scheme.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An IP address identifies a network interface or endpoint using an Internet Protocol addressing scheme. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+HTTP is a protocol used for transferring resources and messages on the web.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> HTTP is a protocol used for transferring resources and messages on the web.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> HTTP is a protocol used for transferring resources and messages on the web.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> HTTP is a protocol used for transferring resources and messages on the web. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+HTTPS is HTTP carried over a transport connection protected by TLS.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> HTTPS is HTTP carried over a transport connection protected by TLS.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> HTTPS is HTTP carried over a transport connection protected by TLS.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> HTTPS is HTTP carried over a transport connection protected by TLS. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+DNS translates domain names such as example.com into network information such as IP addresses.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> DNS translates domain names such as example.com into network information such as IP addresses.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> DNS translates domain names such as example.com into network information such as IP addresses.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> DNS translates domain names such as example.com into network information such as IP addresses. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A database is an organized collection of data managed so that information can be stored, queried, and updated.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A database is an organized collection of data managed so that information can be stored, queried, and updated.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A database is an organized collection of data managed so that information can be stored, queried, and updated.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A database is an organized collection of data managed so that information can be stored, queried, and updated. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+SQL is a language widely used to define, query, and manipulate relational database data.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> SQL is a language widely used to define, query, and manipulate relational database data.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> SQL is a language widely used to define, query, and manipulate relational database data.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> SQL is a language widely used to define, query, and manipulate relational database data. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+An algorithm is a finite procedure for solving a problem or performing a computation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An algorithm is a finite procedure for solving a problem or performing a computation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An algorithm is a finite procedure for solving a problem or performing a computation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An algorithm is a finite procedure for solving a problem or performing a computation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+Time complexity describes how an algorithm's running cost changes as input size grows.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Time complexity describes how an algorithm's running cost changes as input size grows.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Time complexity describes how an algorithm's running cost changes as input size grows.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Time complexity describes how an algorithm's running cost changes as input size grows. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A bug is an unintended behavior or defect in software.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A bug is an unintended behavior or defect in software.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A bug is an unintended behavior or defect in software.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A bug is an unintended behavior or defect in software. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+Debugging is the process of finding the cause of a software problem and correcting it.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Debugging is the process of finding the cause of a software problem and correcting it.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Debugging is the process of finding the cause of a software problem and correcting it.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Debugging is the process of finding the cause of a software problem and correcting it. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A compiler translates source code into another form, often machine code or an intermediate representation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A compiler translates source code into another form, often machine code or an intermediate representation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A compiler translates source code into another form, often machine code or an intermediate representation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A compiler translates source code into another form, often machine code or an intermediate representation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+An interpreter executes program instructions through a runtime rather than requiring the same compilation model as a traditional ahead-of-time compiler.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An interpreter executes program instructions through a runtime rather than requiring the same compilation model as a traditional ahead-of-time compiler.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An interpreter executes program instructions through a runtime rather than requiring the same compilation model as a traditional ahead-of-time compiler.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An interpreter executes program instructions through a runtime rather than requiring the same compilation model as a traditional ahead-of-time compiler. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+Git is a distributed version-control system that records changes to files as a history of commits.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Git is a distributed version-control system that records changes to files as a history of commits.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Git is a distributed version-control system that records changes to files as a history of commits.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Git is a distributed version-control system that records changes to files as a history of commits. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Computing. Treat this as factual background information and use the surrounding wording as context. <END>
+A repository is a project data store that can contain source code, history, branches, and other version-control information.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A repository is a project data store that can contain source code, history, branches, and other version-control information.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A repository is a project data store that can contain source code, history, branches, and other version-control information.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A repository is a project data store that can contain source code, history, branches, and other version-control information. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Machine learning is a field of AI in which models learn patterns or functions from data or experience rather than relying only on explicit hand-written rules.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Machine learning is a field of AI in which models learn patterns or functions from data or experience rather than relying only on explicit hand-written rules.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Machine learning is a field of AI in which models learn patterns or functions from data or experience rather than relying only on explicit hand-written rules.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Machine learning is a field of AI in which models learn patterns or functions from data or experience rather than relying only on explicit hand-written rules. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Supervised learning uses examples with target outputs to learn a mapping from inputs to targets.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Supervised learning uses examples with target outputs to learn a mapping from inputs to targets.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Supervised learning uses examples with target outputs to learn a mapping from inputs to targets.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Supervised learning uses examples with target outputs to learn a mapping from inputs to targets. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Unsupervised learning finds structure in data without requiring a target label for every example.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Unsupervised learning finds structure in data without requiring a target label for every example.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Unsupervised learning finds structure in data without requiring a target label for every example.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Unsupervised learning finds structure in data without requiring a target label for every example. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Reinforcement learning trains an agent using feedback related to actions and outcomes.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Reinforcement learning trains an agent using feedback related to actions and outcomes.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Reinforcement learning trains an agent using feedback related to actions and outcomes.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Reinforcement learning trains an agent using feedback related to actions and outcomes. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A neural network is a parameterized mathematical function composed of layers or other connected transformations.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A neural network is a parameterized mathematical function composed of layers or other connected transformations.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A neural network is a parameterized mathematical function composed of layers or other connected transformations.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A neural network is a parameterized mathematical function composed of layers or other connected transformations. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A parameter is a numerical value learned or optimized during training.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A parameter is a numerical value learned or optimized during training.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A parameter is a numerical value learned or optimized during training.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A parameter is a numerical value learned or optimized during training. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A hyperparameter is a training or architecture setting chosen outside the ordinary weight-updating process.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A hyperparameter is a training or architecture setting chosen outside the ordinary weight-updating process.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A hyperparameter is a training or architecture setting chosen outside the ordinary weight-updating process.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A hyperparameter is a training or architecture setting chosen outside the ordinary weight-updating process. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A loss function measures how poorly model outputs match a chosen training objective.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A loss function measures how poorly model outputs match a chosen training objective.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A loss function measures how poorly model outputs match a chosen training objective.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A loss function measures how poorly model outputs match a chosen training objective. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Gradient descent updates parameters using information about how the loss changes with respect to those parameters.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Gradient descent updates parameters using information about how the loss changes with respect to those parameters.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Gradient descent updates parameters using information about how the loss changes with respect to those parameters.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Gradient descent updates parameters using information about how the loss changes with respect to those parameters. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Backpropagation efficiently computes gradients through a neural network by applying the chain rule.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Backpropagation efficiently computes gradients through a neural network by applying the chain rule.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Backpropagation efficiently computes gradients through a neural network by applying the chain rule.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Backpropagation efficiently computes gradients through a neural network by applying the chain rule. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+An epoch is commonly one full pass through a training dataset, although some training pipelines use the term differently.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An epoch is commonly one full pass through a training dataset, although some training pipelines use the term differently.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An epoch is commonly one full pass through a training dataset, although some training pipelines use the term differently.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An epoch is commonly one full pass through a training dataset, although some training pipelines use the term differently. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A batch is a group of training examples processed together in one optimization step.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A batch is a group of training examples processed together in one optimization step.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A batch is a group of training examples processed together in one optimization step.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A batch is a group of training examples processed together in one optimization step. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A tokenizer converts text into a sequence of units that a language model represents numerically.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A tokenizer converts text into a sequence of units that a language model represents numerically.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A tokenizer converts text into a sequence of units that a language model represents numerically.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A tokenizer converts text into a sequence of units that a language model represents numerically. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A token can be a character, byte, subword, word, or another unit depending on the tokenizer design.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A token can be a character, byte, subword, word, or another unit depending on the tokenizer design.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A token can be a character, byte, subword, word, or another unit depending on the tokenizer design.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A token can be a character, byte, subword, word, or another unit depending on the tokenizer design. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A language model predicts a probability distribution over possible next tokens given previous context.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A language model predicts a probability distribution over possible next tokens given previous context.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A language model predicts a probability distribution over possible next tokens given previous context.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A language model predicts a probability distribution over possible next tokens given previous context. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A causal language model is trained so each position can depend on earlier context rather than future tokens.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A causal language model is trained so each position can depend on earlier context rather than future tokens.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A causal language model is trained so each position can depend on earlier context rather than future tokens.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A causal language model is trained so each position can depend on earlier context rather than future tokens. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A Transformer uses attention mechanisms to model relationships between tokens in a sequence.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A Transformer uses attention mechanisms to model relationships between tokens in a sequence.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A Transformer uses attention mechanisms to model relationships between tokens in a sequence.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A Transformer uses attention mechanisms to model relationships between tokens in a sequence. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Attention lets a model assign different weights to different positions when constructing a representation of the current position.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Attention lets a model assign different weights to different positions when constructing a representation of the current position.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Attention lets a model assign different weights to different positions when constructing a representation of the current position.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Attention lets a model assign different weights to different positions when constructing a representation of the current position. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+An embedding maps discrete IDs such as tokens to learned numerical vectors.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An embedding maps discrete IDs such as tokens to learned numerical vectors.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An embedding maps discrete IDs such as tokens to learned numerical vectors.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An embedding maps discrete IDs such as tokens to learned numerical vectors. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Inference is the process of using a trained model to produce an output for new input.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Inference is the process of using a trained model to produce an output for new input.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Inference is the process of using a trained model to produce an output for new input.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Inference is the process of using a trained model to produce an output for new input. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Fine-tuning continues training a pretrained model on a narrower dataset or objective.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Fine-tuning continues training a pretrained model on a narrower dataset or objective.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Fine-tuning continues training a pretrained model on a narrower dataset or objective.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Fine-tuning continues training a pretrained model on a narrower dataset or objective. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Pretraining usually refers to the broad initial training stage that gives a model general patterns before specialized post-training.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Pretraining usually refers to the broad initial training stage that gives a model general patterns before specialized post-training.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Pretraining usually refers to the broad initial training stage that gives a model general patterns before specialized post-training.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Pretraining usually refers to the broad initial training stage that gives a model general patterns before specialized post-training. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Overfitting occurs when a model fits training data too closely and generalizes poorly to new examples.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Overfitting occurs when a model fits training data too closely and generalizes poorly to new examples.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Overfitting occurs when a model fits training data too closely and generalizes poorly to new examples.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Overfitting occurs when a model fits training data too closely and generalizes poorly to new examples. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Validation data is held out from parameter updates and used to monitor generalization during development.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Validation data is held out from parameter updates and used to monitor generalization during development.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Validation data is held out from parameter updates and used to monitor generalization during development.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Validation data is held out from parameter updates and used to monitor generalization during development. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A checkpoint is a saved state of a model, often including learned weights and metadata needed to resume or reproduce an experiment.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A checkpoint is a saved state of a model, often including learned weights and metadata needed to resume or reproduce an experiment.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A checkpoint is a saved state of a model, often including learned weights and metadata needed to resume or reproduce an experiment.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A checkpoint is a saved state of a model, often including learned weights and metadata needed to resume or reproduce an experiment. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+A model with more parameters has more representational capacity, but parameter count alone does not determine quality.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A model with more parameters has more representational capacity, but parameter count alone does not determine quality.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A model with more parameters has more representational capacity, but parameter count alone does not determine quality.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A model with more parameters has more representational capacity, but parameter count alone does not determine quality. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Training data quality, diversity, optimization, architecture, and compute all influence model behavior.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Training data quality, diversity, optimization, architecture, and compute all influence model behavior.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Training data quality, diversity, optimization, architecture, and compute all influence model behavior.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Training data quality, diversity, optimization, architecture, and compute all influence model behavior. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Knowledge in a neural language model is distributed across learned parameters rather than stored as a simple database of sentences.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Knowledge in a neural language model is distributed across learned parameters rather than stored as a simple database of sentences.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Knowledge in a neural language model is distributed across learned parameters rather than stored as a simple database of sentences.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Knowledge in a neural language model is distributed across learned parameters rather than stored as a simple database of sentences. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Retrieval-augmented generation gives a model external documents at inference time so it can use information without permanently changing its weights.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Retrieval-augmented generation gives a model external documents at inference time so it can use information without permanently changing its weights.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Retrieval-augmented generation gives a model external documents at inference time so it can use information without permanently changing its weights.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Retrieval-augmented generation gives a model external documents at inference time so it can use information without permanently changing its weights. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: AI. Treat this as factual background information and use the surrounding wording as context. <END>
+Continual learning updates a model with new data while trying to avoid destroying useful capabilities learned earlier.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Continual learning updates a model with new data while trying to avoid destroying useful capabilities learned earlier.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Continual learning updates a model with new data while trying to avoid destroying useful capabilities learned earlier.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Continual learning updates a model with new data while trying to avoid destroying useful capabilities learned earlier. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A continent is a large landmass conventionally defined as part of Earth's geography. Different traditions group continents differently.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A continent is a large landmass conventionally defined as part of Earth's geography. Different traditions group continents differently.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A continent is a large landmass conventionally defined as part of Earth's geography. Different traditions group continents differently.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A continent is a large landmass conventionally defined as part of Earth's geography. Different traditions group continents differently. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+The equator is an imaginary circle around Earth halfway between the geographic poles.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The equator is an imaginary circle around Earth halfway between the geographic poles.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the equator is an imaginary circle around Earth halfway between the geographic poles.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The equator is an imaginary circle around Earth halfway between the geographic poles. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+Latitude measures angular position north or south of the equator.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Latitude measures angular position north or south of the equator.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Latitude measures angular position north or south of the equator.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Latitude measures angular position north or south of the equator. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+Longitude measures angular position east or west of a reference meridian.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Longitude measures angular position east or west of a reference meridian.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Longitude measures angular position east or west of a reference meridian.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Longitude measures angular position east or west of a reference meridian. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A time zone is a region using a common standard time or a related local-time rule.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A time zone is a region using a common standard time or a related local-time rule.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A time zone is a region using a common standard time or a related local-time rule.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A time zone is a region using a common standard time or a related local-time rule. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+The International System of Units, abbreviated SI, provides internationally standardized units such as the meter, kilogram, second, ampere, kelvin, mole, and candela.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The International System of Units, abbreviated SI, provides internationally standardized units such as the meter, kilogram, second, ampere, kelvin, mole, and candela.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the International System of Units, abbreviated SI, provides internationally standardized units such as the meter, kilogram, second, ampere, kelvin, mole, and candela.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The International System of Units, abbreviated SI, provides internationally standardized units such as the meter, kilogram, second, ampere, kelvin, mole, and candela. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A kilometer is one thousand meters. A meter is the SI base unit of length.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A kilometer is one thousand meters. A meter is the SI base unit of length.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A kilometer is one thousand meters. A meter is the SI base unit of length.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A kilometer is one thousand meters. A meter is the SI base unit of length. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+One hour contains 60 minutes, and one minute contains 60 seconds.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> One hour contains 60 minutes, and one minute contains 60 seconds.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> One hour contains 60 minutes, and one minute contains 60 seconds.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> One hour contains 60 minutes, and one minute contains 60 seconds. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+The Gregorian calendar is the civil calendar used by many countries. It uses a leap-year rule designed to keep the calendar aligned with the solar year.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Gregorian calendar is the civil calendar used by many countries. It uses a leap-year rule designed to keep the calendar aligned with the solar year.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Gregorian calendar is the civil calendar used by many countries. It uses a leap-year rule designed to keep the calendar aligned with the solar year.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Gregorian calendar is the civil calendar used by many countries. It uses a leap-year rule designed to keep the calendar aligned with the solar year. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A democracy is a form of government in which political power is ultimately connected to the people, commonly through voting and representative institutions, though systems differ.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A democracy is a form of government in which political power is ultimately connected to the people, commonly through voting and representative institutions, though systems differ.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A democracy is a form of government in which political power is ultimately connected to the people, commonly through voting and representative institutions, though systems differ.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A democracy is a form of government in which political power is ultimately connected to the people, commonly through voting and representative institutions, though systems differ. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A constitution is a foundational framework of laws and institutions that defines governmental powers and rights in a particular political system.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A constitution is a foundational framework of laws and institutions that defines governmental powers and rights in a particular political system.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A constitution is a foundational framework of laws and institutions that defines governmental powers and rights in a particular political system.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A constitution is a foundational framework of laws and institutions that defines governmental powers and rights in a particular political system. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A census is a systematic count and description of a population, often conducted by a government.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A census is a systematic count and description of a population, often conducted by a government.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A census is a systematic count and description of a population, often conducted by a government.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A census is a systematic count and description of a population, often conducted by a government. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A map is a representation of geographic space designed for a particular purpose, such as navigation, reference, or analysis.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A map is a representation of geographic space designed for a particular purpose, such as navigation, reference, or analysis.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A map is a representation of geographic space designed for a particular purpose, such as navigation, reference, or analysis.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A map is a representation of geographic space designed for a particular purpose, such as navigation, reference, or analysis. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A language is a structured system used by people or communities to communicate meaning. Languages can change over time and vary by context.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A language is a structured system used by people or communities to communicate meaning. Languages can change over time and vary by context.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A language is a structured system used by people or communities to communicate meaning. Languages can change over time and vary by context.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A language is a structured system used by people or communities to communicate meaning. Languages can change over time and vary by context. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A dialect is a variety of a language associated with a particular region, group, or social context.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A dialect is a variety of a language associated with a particular region, group, or social context.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A dialect is a variety of a language associated with a particular region, group, or social context.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A dialect is a variety of a language associated with a particular region, group, or social context. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A translation expresses the meaning of a text in another language.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A translation expresses the meaning of a text in another language.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A translation expresses the meaning of a text in another language.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A translation expresses the meaning of a text in another language. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A metaphor describes one thing in terms of another to create an expressive comparison, without necessarily claiming literal identity.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A metaphor describes one thing in terms of another to create an expressive comparison, without necessarily claiming literal identity.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A metaphor describes one thing in terms of another to create an expressive comparison, without necessarily claiming literal identity.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A metaphor describes one thing in terms of another to create an expressive comparison, without necessarily claiming literal identity. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+An analogy explains or clarifies an idea by comparing it with a different but structurally similar situation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An analogy explains or clarifies an idea by comparing it with a different but structurally similar situation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An analogy explains or clarifies an idea by comparing it with a different but structurally similar situation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An analogy explains or clarifies an idea by comparing it with a different but structurally similar situation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A hypothesis is a proposed explanation or prediction that can be investigated with evidence.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A hypothesis is a proposed explanation or prediction that can be investigated with evidence.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A hypothesis is a proposed explanation or prediction that can be investigated with evidence.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A hypothesis is a proposed explanation or prediction that can be investigated with evidence. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: World. Treat this as factual background information and use the surrounding wording as context. <END>
+A theory in science is a well-supported explanatory framework that accounts for a broad range of observations.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A theory in science is a well-supported explanatory framework that accounts for a broad range of observations.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A theory in science is a well-supported explanatory framework that accounts for a broad range of observations.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A theory in science is a well-supported explanatory framework that accounts for a broad range of observations. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Great Pyramid of Giza was built in ancient Egypt during the Fourth Dynasty, traditionally associated with Pharaoh Khufu.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Great Pyramid of Giza was built in ancient Egypt during the Fourth Dynasty, traditionally associated with Pharaoh Khufu.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Great Pyramid of Giza was built in ancient Egypt during the Fourth Dynasty, traditionally associated with Pharaoh Khufu.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Great Pyramid of Giza was built in ancient Egypt during the Fourth Dynasty, traditionally associated with Pharaoh Khufu. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Roman Empire developed from the Roman Republic and eventually became a vast political and cultural system around the Mediterranean and beyond.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Roman Empire developed from the Roman Republic and eventually became a vast political and cultural system around the Mediterranean and beyond.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Roman Empire developed from the Roman Republic and eventually became a vast political and cultural system around the Mediterranean and beyond.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Roman Empire developed from the Roman Republic and eventually became a vast political and cultural system around the Mediterranean and beyond. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The printing press using movable type in Europe is strongly associated with Johannes Gutenberg in the fifteenth century.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The printing press using movable type in Europe is strongly associated with Johannes Gutenberg in the fifteenth century.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the printing press using movable type in Europe is strongly associated with Johannes Gutenberg in the fifteenth century.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The printing press using movable type in Europe is strongly associated with Johannes Gutenberg in the fifteenth century. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Renaissance was a broad cultural and intellectual movement that began in parts of Europe and later influenced art, scholarship, and politics.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Renaissance was a broad cultural and intellectual movement that began in parts of Europe and later influenced art, scholarship, and politics.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Renaissance was a broad cultural and intellectual movement that began in parts of Europe and later influenced art, scholarship, and politics.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Renaissance was a broad cultural and intellectual movement that began in parts of Europe and later influenced art, scholarship, and politics. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Industrial Revolution involved major changes in manufacturing, transport, energy use, and urbanization beginning in Britain in the eighteenth century and later spreading widely.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Industrial Revolution involved major changes in manufacturing, transport, energy use, and urbanization beginning in Britain in the eighteenth century and later spreading widely.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Industrial Revolution involved major changes in manufacturing, transport, energy use, and urbanization beginning in Britain in the eighteenth century and later spreading widely.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Industrial Revolution involved major changes in manufacturing, transport, energy use, and urbanization beginning in Britain in the eighteenth century and later spreading widely. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+World War I lasted from 1914 to 1918 and involved major powers from Europe and beyond.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> World War I lasted from 1914 to 1918 and involved major powers from Europe and beyond.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> World War I lasted from 1914 to 1918 and involved major powers from Europe and beyond.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> World War I lasted from 1914 to 1918 and involved major powers from Europe and beyond. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+World War II lasted from 1939 to 1945 and became a global conflict involving many countries.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> World War II lasted from 1939 to 1945 and became a global conflict involving many countries.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> World War II lasted from 1939 to 1945 and became a global conflict involving many countries.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> World War II lasted from 1939 to 1945 and became a global conflict involving many countries. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Holocaust was the systematic persecution and murder of six million Jews by Nazi Germany and its collaborators, alongside the persecution and murder of many other targeted groups.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Holocaust was the systematic persecution and murder of six million Jews by Nazi Germany and its collaborators, alongside the persecution and murder of many other targeted groups.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Holocaust was the systematic persecution and murder of six million Jews by Nazi Germany and its collaborators, alongside the persecution and murder of many other targeted groups.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Holocaust was the systematic persecution and murder of six million Jews by Nazi Germany and its collaborators, alongside the persecution and murder of many other targeted groups. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The United Nations was established in 1945 after World War II with the stated purpose of helping maintain international peace and promoting international cooperation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The United Nations was established in 1945 after World War II with the stated purpose of helping maintain international peace and promoting international cooperation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the United Nations was established in 1945 after World War II with the stated purpose of helping maintain international peace and promoting international cooperation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The United Nations was established in 1945 after World War II with the stated purpose of helping maintain international peace and promoting international cooperation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The first successful powered flight by the Wright brothers took place at Kitty Hawk, North Carolina, in 1903.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The first successful powered flight by the Wright brothers took place at Kitty Hawk, North Carolina, in 1903.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the first successful powered flight by the Wright brothers took place at Kitty Hawk, North Carolina, in 1903.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The first successful powered flight by the Wright brothers took place at Kitty Hawk, North Carolina, in 1903. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The first humans to reach the Moon were the crew of Apollo 11 in 1969. Neil Armstrong became the first person to walk on the lunar surface.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The first humans to reach the Moon were the crew of Apollo 11 in 1969. Neil Armstrong became the first person to walk on the lunar surface.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the first humans to reach the Moon were the crew of Apollo 11 in 1969. Neil Armstrong became the first person to walk on the lunar surface.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The first humans to reach the Moon were the crew of Apollo 11 in 1969. Neil Armstrong became the first person to walk on the lunar surface. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Berlin Wall fell in 1989, becoming a major symbol of political change in Europe near the end of the Cold War.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Berlin Wall fell in 1989, becoming a major symbol of political change in Europe near the end of the Cold War.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Berlin Wall fell in 1989, becoming a major symbol of political change in Europe near the end of the Cold War.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Berlin Wall fell in 1989, becoming a major symbol of political change in Europe near the end of the Cold War. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Cold War was a prolonged geopolitical rivalry primarily involving the United States and the Soviet Union and their respective allies after World War II.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Cold War was a prolonged geopolitical rivalry primarily involving the United States and the Soviet Union and their respective allies after World War II.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Cold War was a prolonged geopolitical rivalry primarily involving the United States and the Soviet Union and their respective allies after World War II.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Cold War was a prolonged geopolitical rivalry primarily involving the United States and the Soviet Union and their respective allies after World War II. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The first modern Olympic Games were held in Athens in 1896.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The first modern Olympic Games were held in Athens in 1896.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the first modern Olympic Games were held in Athens in 1896.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The first modern Olympic Games were held in Athens in 1896. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: History. Treat this as factual background information and use the surrounding wording as context. <END>
+The Silk Road was a network of trade routes connecting regions of East Asia, Central Asia, the Middle East, and Europe over many centuries.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> The Silk Road was a network of trade routes connecting regions of East Asia, Central Asia, the Middle East, and Europe over many centuries.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> In simple terms, the Silk Road was a network of trade routes connecting regions of East Asia, Central Asia, the Middle East, and Europe over many centuries.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> The Silk Road was a network of trade routes connecting regions of East Asia, Central Asia, the Middle East, and Europe over many centuries. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A recipe is a set of instructions for preparing food, usually listing ingredients and steps.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A recipe is a set of instructions for preparing food, usually listing ingredients and steps.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A recipe is a set of instructions for preparing food, usually listing ingredients and steps.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A recipe is a set of instructions for preparing food, usually listing ingredients and steps. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A library is a place or service that provides access to books, media, information, or other resources.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A library is a place or service that provides access to books, media, information, or other resources.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A library is a place or service that provides access to books, media, information, or other resources.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A library is a place or service that provides access to books, media, information, or other resources. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A museum preserves, studies, and presents objects or information for education and public engagement.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A museum preserves, studies, and presents objects or information for education and public engagement.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A museum preserves, studies, and presents objects or information for education and public engagement.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A museum preserves, studies, and presents objects or information for education and public engagement. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A calendar organizes dates into units such as days, weeks, months, and years.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A calendar organizes dates into units such as days, weeks, months, and years.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A calendar organizes dates into units such as days, weeks, months, and years.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A calendar organizes dates into units such as days, weeks, months, and years. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A budget is a plan for expected income and spending over a particular period.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A budget is a plan for expected income and spending over a particular period.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A budget is a plan for expected income and spending over a particular period.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A budget is a plan for expected income and spending over a particular period. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+Interest is a charge or return associated with borrowing or lending money, often expressed as a percentage rate.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Interest is a charge or return associated with borrowing or lending money, often expressed as a percentage rate.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Interest is a charge or return associated with borrowing or lending money, often expressed as a percentage rate.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Interest is a charge or return associated with borrowing or lending money, often expressed as a percentage rate. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+Inflation is a sustained increase in the general level of prices, which reduces the purchasing power of a unit of currency over time.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Inflation is a sustained increase in the general level of prices, which reduces the purchasing power of a unit of currency over time.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Inflation is a sustained increase in the general level of prices, which reduces the purchasing power of a unit of currency over time.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Inflation is a sustained increase in the general level of prices, which reduces the purchasing power of a unit of currency over time. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A receipt is a record showing that a payment or transaction occurred.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A receipt is a record showing that a payment or transaction occurred.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A receipt is a record showing that a payment or transaction occurred.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A receipt is a record showing that a payment or transaction occurred. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+An address identifies a location for purposes such as mail delivery or navigation.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> An address identifies a location for purposes such as mail delivery or navigation.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> An address identifies a location for purposes such as mail delivery or navigation.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> An address identifies a location for purposes such as mail delivery or navigation. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A password is a secret sequence used to authenticate access to a system. Strong passwords should not be shared publicly.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A password is a secret sequence used to authenticate access to a system. Strong passwords should not be shared publicly.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A password is a secret sequence used to authenticate access to a system. Strong passwords should not be shared publicly.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A password is a secret sequence used to authenticate access to a system. Strong passwords should not be shared publicly. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+Two-factor authentication adds a second verification factor beyond a password, such as a security key or one-time code.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Two-factor authentication adds a second verification factor beyond a password, such as a security key or one-time code.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Two-factor authentication adds a second verification factor beyond a password, such as a security key or one-time code.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Two-factor authentication adds a second verification factor beyond a password, such as a security key or one-time code. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A backup is a separate copy of data kept so that information can be restored after loss or corruption.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A backup is a separate copy of data kept so that information can be restored after loss or corruption.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A backup is a separate copy of data kept so that information can be restored after loss or corruption.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A backup is a separate copy of data kept so that information can be restored after loss or corruption. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+Compression reduces the size of data by representing it more efficiently. Lossless compression preserves all original information.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Compression reduces the size of data by representing it more efficiently. Lossless compression preserves all original information.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Compression reduces the size of data by representing it more efficiently. Lossless compression preserves all original information.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Compression reduces the size of data by representing it more efficiently. Lossless compression preserves all original information. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A photograph records visual information captured by a camera or another imaging device.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A photograph records visual information captured by a camera or another imaging device.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A photograph records visual information captured by a camera or another imaging device.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A photograph records visual information captured by a camera or another imaging device. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+Resolution describes how much detail an image can represent, often in terms of pixel dimensions or spatial density.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> Resolution describes how much detail an image can represent, often in terms of pixel dimensions or spatial density.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> Resolution describes how much detail an image can represent, often in terms of pixel dimensions or spatial density.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> Resolution describes how much detail an image can represent, often in terms of pixel dimensions or spatial density. This is a useful example of how facts are expressed in context.
+<END>
+
+<SYSTEM> Knowledge category: Everyday. Treat this as factual background information and use the surrounding wording as context. <END>
+A high-resolution image has more pixels or greater detail representation than a lower-resolution image of comparable framing.
+<END>
+
+<USER> What is the key fact here?
+<ASSISTANT> A high-resolution image has more pixels or greater detail representation than a lower-resolution image of comparable framing.
+<END>
+
+<USER> Explain this fact simply.
+<ASSISTANT> A high-resolution image has more pixels or greater detail representation than a lower-resolution image of comparable framing.
+<END>
+
+<USER> Tell me about this topic.
+<ASSISTANT> A high-resolution image has more pixels or greater detail representation than a lower-resolution image of comparable framing. This is a useful example of how facts are expressed in context.
+<END>
