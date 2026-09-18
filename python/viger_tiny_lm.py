@@ -392,6 +392,12 @@ def train(
         torch.cuda.manual_seed_all(42)
         torch.set_float32_matmul_precision("high")
 
+    # Build a local ~1M-token English corpus once if it is not present yet.
+    # The generated corpus is deterministic and remains local; it is included
+    # automatically by _load_corpus because that function loads every .txt in data/.
+    from python.build_english_corpus import ensure_corpus
+    ensure_corpus()
+
     corpus = _load_corpus(corpus_path)
     tokenizer = TinyBPE.train(corpus, max_merges=MAX_BPE_MERGES)
     ids = torch.tensor(tokenizer.encode(corpus), dtype=torch.long)
