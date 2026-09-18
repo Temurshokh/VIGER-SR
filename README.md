@@ -118,17 +118,17 @@ generated response
 
 ### English curriculum
 
-The training corpus is now much larger than the original toy set. `data/english_curriculum.txt` is automatically loaded together with `data/chat.txt`.
+The trainer automatically loads **every `.txt` file in `data/`**, so the language curriculum can grow without changing the model code.
 
-It covers:
+The corpus is intentionally moving from textbook-style English toward natural language. It includes:
 
-- common nouns, verbs, adjectives, pronouns, prepositions, and colors;
-- definitions and example sentences;
-- singular/plural forms, articles, auxiliary verbs, negation, questions, and basic tense patterns;
-- synonyms, opposites, categories, simple facts, and small reasoning examples;
-- everyday conversation and requests for explanations.
+- `data/english_curriculum.txt` — core vocabulary, grammar, sentence patterns, and simple reasoning;
+- `data/english_natural_c1.txt` — everyday dialogue, contractions, casual phrases, phrasal verbs, short stories, technical explanations, history, and more advanced grammar;
+- `data/english_advanced_c1.txt` — B2/C1-oriented discourse, hedging, polite disagreement, register changes, idioms, nuanced explanations, narrative prose, and context-heavy vocabulary.
 
-The goal is not to make a huge general-purpose model. The goal is to give a tiny model enough varied English structure to learn how words relate and how simple dialogue works.
+This is a **C1-oriented training corpus**, not a guarantee that a tiny model will reach CEFR C1. A 1–20M parameter model trained from scratch on a small local corpus is an educational experiment; it can learn useful English patterns but will remain far below a large pretrained language model in breadth and reliability.
+
+The important shift is that the model sees English **in context**: people greeting each other, changing topics, asking follow-up questions, telling stories, explaining ideas, using slang, making cautious claims, and switching between casual and formal language.
 
 ### Tokenization
 
@@ -199,8 +199,10 @@ VIGER-SR/
 ├── telegram_bot/
 │   └── bot.py              ← Telegram interface
 ├── data/
-│   ├── chat.txt            ← project chat examples
-│   └── english_curriculum.txt  ← expanded English curriculum
+│   ├── chat.txt                 ← project chat examples
+│   ├── english_curriculum.txt   ← core English curriculum
+│   ├── english_natural_c1.txt   ← natural conversation + stories
+│   └── english_advanced_c1.txt  ← advanced C1-oriented English
 ├── run_bot.py              ← one-command launcher
 ├── run.py                  ← simple Python entry point
 └── requirements.txt        ← Python dependencies
