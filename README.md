@@ -5,7 +5,7 @@
 VIGER SR is a Python-first Telegram AI experiment with two independent local inference systems:
 
 - 🖼️ **Image SR** — pretrained Swin2SR for 2× and 4× super-resolution, executed locally.
-- 🧠 **VIGER TinyGPT v4** — a small language model trained from scratch by this project.
+- 🧠 **VIGER TinyGPT v5** — a ~5M-parameter language model trained from scratch by this project.
 
 The Telegram experiment does **not** require Visual Studio, CMake, C++, a native `.exe`, or a local LLM server.
 
@@ -25,11 +25,10 @@ If you update from an older version, the cleanest upgrade is:
 
 ```powershell
 Remove-Item -Recurse -Force .venv -ErrorAction SilentlyContinue
-Remove-Item -Recurse -Force artifacts\viger_tiny_lm.pt -ErrorAction SilentlyContinue
 python run_bot.py
 ```
 
-You do not normally need to delete anything on later runs. The TinyGPT checkpoint stores both a model version and a SHA-256 fingerprint of the training corpus, so changing the corpus automatically triggers a fresh training run.
+You do **not** need to delete your old 1.3M checkpoint if you backed it up separately. V5 has a new model version and architecture, so it will train a new checkpoint rather than silently loading V4.
 
 ## Telegram
 
@@ -38,7 +37,7 @@ Telegram
    │
    ├── 📷 photo ──> Python SR engine ──> Swin2SR ──> enhanced image
    │
-   └── 💬 text ───> VIGER TinyGPT ───> generated text
+   └── 💬 text ───> VIGER TinyGPT v5 ───> generated text
 ```
 
 Commands:
@@ -49,34 +48,35 @@ Commands:
 /help
 /voice on
 /voice off
+/learn on
+/learn off
 /teach Hi => Hello!
 /train
-/train 3500
+/train 5000
+/train 8000
 ```
 
-`/teach` adds a real training example to `data/chat.txt`. `/train` retrains the neural model from the current `.txt` corpus in `data/`, including the expanded English curriculum.
-
-For better image input quality, send the image as a **Telegram file/document** when possible. A normal Telegram chat photo may be compressed before VIGER receives it.
+`/teach` adds a supervised example to `data/chat.txt`. `/learn on` stores your normal text messages in the local `data/user_learning.txt` corpus so you can feed the model larger language samples without manually writing `/teach` for every line.
 
 ## What connects to the internet?
 
-There are only two external connections in the normal experiment:
+There are two external connections in the normal experiment:
 
-1. **Telegram API** — required for the bot to receive your messages and send replies.
-2. **Hugging Face model download** — the first time an image SR model is used, its pretrained Swin2SR weights are downloaded. After that, the weights are reused from the local `.cache/huggingface` cache.
+1. **Telegram API** — required for the bot to receive messages and send replies.
+2. **Hugging Face model download** — the first time an image SR model is used, its pretrained Swin2SR weights are downloaded. After that, the weights are reused from the local cache.
 
-There is **no remote text-model API** in VIGER TinyGPT. Its architecture, tokenizer, training loop, and learned weights are local to this project/runtime.
+There is **no remote text-model API** in VIGER TinyGPT. The text architecture, tokenizer, training loop, and learned weights are local.
 
 ## Image super-resolution
 
-The current image experiment uses two pretrained Swin2SR checkpoints:
+The current image experiment uses:
 
 ```text
 2×  caidas/swin2SR-classical-sr-x2-64
 4×  caidas/swin2SR-realworld-sr-x4-64-bsrgan-psnr
 ```
 
-The inference path is intentionally simple:
+The inference path is:
 
 ```text
 PIL image
@@ -94,118 +94,127 @@ remove padding
 PNG output, capped at 3840×2160
 ```
 
-The project performs this preprocessing itself with **PIL + NumPy + PyTorch**. `torchvision` is not required by the SR path.
+The project implements the preprocessing itself with **PIL + NumPy + PyTorch**. `torchvision` is not required by the SR path.
 
-This is genuine neural super-resolution, but it is **not yet a VIGER-trained SR model**. The pretrained checkpoint is being used as the working image benchmark while we build the rest of the system. Training our own photographic SR model is a later stage and requires a substantially larger dataset and training budget.
+This is genuine neural super-resolution, but it is **not yet a VIGER-trained SR model**. Swin2SR is currently the working image baseline while the text model is built and the future VIGER SR training pipeline is developed.
 
-## VIGER TinyGPT v4
+## VIGER TinyGPT v5
 
-The language model is deliberately tiny and educational, but it is a real causal Transformer trained from scratch:
+V5 is the first architectural upgrade from the original ~1.3M-parameter VIGER model.
+
+The old 1.3M model is useful as a historical baseline. V5 does not copy those weights; it is a new larger architecture trained from scratch.
 
 ```text
-text corpus
-   ↓
+local English corpus
+       ↓
 self-trained byte-level BPE tokenizer
-   ↓
-<SYSTEM>/<USER>/<ASSISTANT>/<END> special tokens
-   ↓
-TinyGPT Transformer
-   ↓
+       ↓
+<User>/<Assistant>/<System>/<End>
+       ↓
+VIGER TinyGPT v5
+       ↓
 next-token probabilities
-   ↓
+       ↓
 generated response
 ```
 
-### English curriculum
+### English corpus
 
-The trainer automatically loads **every `.txt` file in `data/`**, so the language curriculum can grow without changing the model code.
+The trainer automatically loads **every `.txt` file in `data/`**.
 
-The corpus is intentionally moving from textbook-style English toward natural language. It includes:
+Current language sources include:
 
-- `data/english_curriculum.txt` — core vocabulary, grammar, sentence patterns, and simple reasoning;
-- `data/english_natural_c1.txt` — everyday dialogue, contractions, casual phrases, phrasal verbs, short stories, technical explanations, history, and more advanced grammar;
-- `data/english_advanced_c1.txt` — B2/C1-oriented discourse, hedging, polite disagreement, register changes, idioms, nuanced explanations, narrative prose, and context-heavy vocabulary.
+- `english_curriculum.txt` — core vocabulary, grammar, sentence patterns, and simple reasoning;
+- `english_natural_c1.txt` — everyday dialogue, contractions, casual phrases, phrasal verbs, short stories, history, technical explanations, and natural conversation;
+- `english_advanced_c1.txt` — C1-oriented discourse, uncertainty, polite disagreement, register changes, idioms, nuanced explanations, narrative prose, and advanced grammar;
+- `user_learning.txt` — optional local material collected with `/learn on`.
 
-This is a **C1-oriented training corpus**, not a guarantee that a tiny model will reach CEFR C1. A 1–20M parameter model trained from scratch on a small local corpus is an educational experiment; it can learn useful English patterns but will remain far below a large pretrained language model in breadth and reliability.
+This is a **C1-oriented corpus**, not a claim that a 5M model will reach CEFR C1. The goal is to expose the model to much richer language structure.
 
-The important shift is that the model sees English **in context**: people greeting each other, changing topics, asking follow-up questions, telling stories, explaining ideas, using slang, making cautious claims, and switching between casual and formal language.
-
-### Tokenization
-
-The tokenizer starts with raw UTF-8 bytes, then learns frequent byte-pair merges from the whole local corpus. This creates reusable subword-like pieces while keeping byte fallback for unseen text.
-
-The special role tokens are learned as dedicated IDs:
-
-```text
-<SYSTEM>
-<USER>
-<ASSISTANT>
-<END>
-```
-
-This gives the model an explicit representation of conversation roles rather than relying only on plain text labels.
-
-### Model
+### V5 architecture
 
 Current defaults:
 
 ```text
-Embedding dimension : 160
-Transformer layers   : 4
-Attention heads      : 4
-Context length       : 192 tokens
-BPE merges           : up to 320
-Minimum response    : 6 generated tokens
+Embedding dimension : 256
+Transformer layers   : 6
+Attention heads      : 8
+Context length       : 256 tokens
+BPE merges           : up to 512
+Dropout              : 0.10
+Approx parameters    : ~5M at the current vocabulary
 ```
 
-The generator also prevents role-control tokens from appearing inside an answer and prevents an immediate `<END>`, which removes the previous empty-response failure mode.
+The model ties its input and output token embeddings to keep the architecture compact.
 
-The checkpoint stores its architecture metadata, tokenizer merges, model version, and corpus hash. When the code or corpus changes, an old incompatible checkpoint is retrained instead of silently being reused.
+Generation:
 
-### Chat context
+- minimum 6 new tokens before `<END>`;
+- role tokens are blocked during answer generation;
+- mild repetition penalty;
+- temperature and top-k sampling.
 
-The Telegram bot keeps the last few user/assistant exchanges in the current chat session and feeds them back into the model context. This is lightweight conversation context, not long-term memory.
+Training:
 
-### Teaching the model
+- AdamW;
+- gradient clipping;
+- 10% validation split;
+- warm-up learning rate;
+- cosine learning-rate decay;
+- deterministic seed for reproducible experiments.
 
-Example:
+The checkpoint stores the architecture metadata, tokenizer merges, model version, corpus hash, parameter count, and training steps.
+
+### 1.3M → 5M → 10M → 20M
+
+Parameter count changes only when the architecture changes.
 
 ```text
-/teach What is User? => User is the person who sends a message.
-/teach What is Assistant? => Assistant is the program that responds.
-/train 3500
+More training data / more steps
+        ↓
+better values for the same parameters
+
+Larger dim / more layers / larger architecture
+        ↓
+more parameters
 ```
 
-The first command changes the actual corpus. The second trains the neural weights on that corpus. No response is inserted into a dictionary.
+The intended progression is:
+
+```text
+VIGER 1.3M  ← saved baseline
+     ↓
+VIGER ~5M   ← current V5
+     ↓
+VIGER ~10M
+     ↓
+VIGER ~20M
+```
+
+Each size should be evaluated on the same fixed test prompts so improvements can be compared.
 
 ## Voice
 
-`/voice on` asks the local `pyttsx3` engine to turn the generated response into audio. Voice generation is performed on the machine running the bot.
-
-## Running model training directly
-
-```bash
-python -c "from pathlib import Path; from python.viger_tiny_lm import train; train(Path('data/chat.txt'), Path('artifacts/viger_tiny_lm.pt'), 3500)"
-```
+`/voice on` asks the local `pyttsx3` engine to turn the generated response into audio. Voice generation happens on the machine running the bot.
 
 ## Project structure
 
 ```text
 VIGER-SR/
 ├── python/
-│   ├── viger_tiny_lm.py    ← TinyGPT v4 + BPE + training
-│   ├── sr_engine.py        ← local Swin2SR inference
-│   └── train_tiny_chat.py  ← legacy training helper
+│   ├── viger_tiny_lm.py       ← TinyGPT v5 + BPE + training
+│   └── sr_engine.py           ← local Swin2SR inference
 ├── telegram_bot/
-│   └── bot.py              ← Telegram interface
+│   └── bot.py                 ← Telegram interface
 ├── data/
-│   ├── chat.txt                 ← project chat examples
-│   ├── english_curriculum.txt   ← core English curriculum
-│   ├── english_natural_c1.txt   ← natural conversation + stories
-│   └── english_advanced_c1.txt  ← advanced C1-oriented English
-├── run_bot.py              ← one-command launcher
-├── run.py                  ← simple Python entry point
-└── requirements.txt        ← Python dependencies
+│   ├── chat.txt               ← project chat examples
+│   ├── english_curriculum.txt ← core English
+│   ├── english_natural_c1.txt ← natural conversation + stories
+│   ├── english_advanced_c1.txt← advanced English
+│   └── user_learning.txt      ← local user corpus, ignored by Git
+├── run_bot.py                 ← one-command launcher
+├── run.py                     ← simple Python entry point
+└── requirements.txt           ← Python dependencies
 ```
 
 ## Design rule
