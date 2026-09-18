@@ -1,8 +1,9 @@
-"""VIGER Telegram bot: Python-only image SR + self-trained TinyGPT."""
+"""VIGEROID 6 Telegram bot: offline local LM + local knowledge assist + image SR."""
 
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 import shutil
 import sys
@@ -13,9 +14,15 @@ from pathlib import Path
 from PIL import Image
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import Conflict
-from telegram.ext import Application, CallbackQueryHandler, CommandHandler, ContextTypes, MessageHandler, filters
+from telegram.ext import (
+    Application,
+    CallbackQueryHandler,
+    CommandHandler,
+    ContextTypes,
+    MessageHandler,
+    filters,
+)
 
-# Make the repository root importable even when this file is launched directly.
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -23,19 +30,26 @@ if str(ROOT) not in sys.path:
 CORPUS = ROOT / "data" / "chat.txt"
 LEARNING_CORPUS = ROOT / "data" / "user_learning.txt"
 CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
+TRAINING_STATUS = ROOT / "artifacts" / "training_status.json"
+MODEL_NAME = "VIGEROID 6"
 
 _lm = None
 _sr = None
 
 
 def keyboard() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup([
+    return InlineKeyboardMarkup(
         [
-            InlineKeyboardButton("✨ AI 2×", callback_data="scale:2"),
-            InlineKeyboardButton("🔥 AI 4×", callback_data="scale:4"),
-        ],
-        [InlineKeyboardButton("🧠 AI status", callback_data="status")],
-    ])
+            [
+                InlineKeyboardButton("✨ AI 2×", callback_data="scale:2"),
+                InlineKeyboardButton("🔥 AI 4×", callback_data="scale:4"),
+            ],
+            [
+                InlineKeyboardButton("🧠 Model", callback_data="model"),
+                InlineKeyboardButton("📚 Knowledge", callback_data="knowledge"),
+            ],
+        ]
+    )
 
 
 def get_scale(context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -46,6 +60,7 @@ def get_lm():
     global _lm
     if _lm is None:
         from python.viger_tiny_lm import load_or_train
+
         _lm = load_or_train(CHECKPOINT, CORPUS)
     return _lm
 
@@ -53,6 +68,7 @@ def get_lm():
 def reload_lm():
     global _lm
     from python.viger_tiny_lm import load_or_train
+
     _lm = load_or_train(CHECKPOINT, CORPUS)
     return _lm
 
@@ -61,17 +77,29 @@ def get_sr():
     global _sr
     if _sr is None:
         from python.sr_engine import SREngine
+
         _sr = SREngine()
     return _sr
 
 
-def generate_text(text: str, history: list[tuple[str, str]]) -> str:
+def generate_text(
+    text: str,
+    history: list[tuple[str, str]],
+    knowledge_context: str = "",
+) -> str:
     from python.viger_tiny_lm import answer
-    return answer(get_lm(), text, history=history)
+
+    return answer(
+        get_lm(),
+        text,
+        history=history,
+        knowledge_context=knowledge_context,
+    )
 
 
 def make_voice(text: str, path: Path) -> None:
     import pyttsx3
+
     engine = pyttsx3.init()
     engine.setProperty("rate", 165)
     engine.save_to_file(text, str(path))
@@ -79,7 +107,6 @@ def make_voice(text: str, path: Path) -> None:
 
 
 def append_learning_text(text: str) -> None:
-    """Store user-provided language material without storing the bot's reply."""
     LEARNING_CORPUS.parent.mkdir(parents=True, exist_ok=True)
     clean = text.strip()
     if not clean:
@@ -96,20 +123,59 @@ def learning_stats() -> tuple[int, int]:
     return len(non_empty), len(text)
 
 
+def checkpoint_info() -> dict:
+    if not CHECKPOINT.exists():
+        return {}
+    try:
+        import torch
+
+        package = torch.load(
+            CHECKPOINT,
+            map_location="cpu",
+            weights_only=True,
+        )
+        return {
+            "params": int(package.get("parameter_count", 0)),
+            "vocab": int(package.get("vocab_size", 0)),
+            "dim": int(package.get("dim", 0)),
+            "layers": int(package.get("layers", 0)),
+            "heads": int(package.get("heads", 0)),
+            "block": int(package.get("block", 0)),
+            "steps": int(package.get("training_steps", 0)),
+            "size_mb": CHECKPOINT.stat().st_size / (1024 * 1024),
+        }
+    except Exception:
+        return {}
+
+
+def training_status() -> dict:
+    if not TRAINING_STATUS.exists():
+        return {}
+    try:
+        return json.loads(
+            TRAINING_STATUS.read_text(encoding="utf-8")
+        )
+    except Exception:
+        return {}
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     context.user_data["scale"] = 2
     context.user_data["voice"] = False
     context.user_data["history"] = []
     context.user_data["learn"] = False
+    context.user_data["knowledge"] = True
+
     await update.message.reply_text(
-        "⚡ VIGER AI lab\n\n"
-        "📸 Photo → AI 2×/4× super-resolution.\n"
-        "💬 Text → my own TinyGPT generates the answer.\n"
-        "📚 /learn on|off stores your normal messages as language-training text.\n"
-        "🧪 /teach question => answer adds supervised training data.\n"
-        "🧠 /train [steps] retrains the model from scratch.\n"
-        "🔊 /voice on|off enables local voice replies.\n\n"
-        "Python-only: no Visual Studio, no C++, no .exe, no text LLM server.",
+        "⚡ VIGEROID 6 lab\n\n"
+        "📸 Photo → local neural super-resolution 2×/4×.\n"
+        "💬 Text → your own VIGEROID model.\n"
+        "📚 /learn on|off stores your training material locally.\n"
+        "🧪 /teach question => answer adds supervised data.\n"
+        "🧠 /train N trains/resumes toward N total steps.\n"
+        "🌐 /knowledge on|off enables local factual notes at inference.\n"
+        "📊 /model and /benchmark inspect the current model.\n"
+        "🔊 /voice on|off enables local voice replies.",
         reply_markup=keyboard(),
     )
 
@@ -117,38 +183,124 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         "📸 Photo: choose 2× or 4×, then send the image.\n"
-        "💬 Text: generated by the self-trained TinyGPT.\n"
-        "📚 /learn on|off — collect your next normal messages as language text.\n"
+        "💬 Text: generated by VIGEROID 6 locally.\n"
+        "🌐 /knowledge on|off — use local factual notes as optional context.\n"
+        "📚 /learn on|off — collect your messages for future training.\n"
         "🧪 /teach question => answer — add a supervised example.\n"
-        "🧠 /train 5000 — train/resume to target steps\n"
-        "🧪 /train new 5000 — start from scratch\n"
+        "🧠 /train 5000 — train/resume to a target step count.\n"
+        "🆕 /train new 5000 — start a fresh run.\n"
+        "📊 /model — architecture, parameter count, checkpoint size.\n"
+        "🧪 /benchmark — run a fixed local generation benchmark.\n"
         "🔊 /voice on|off\n"
-        "ℹ️ /status\n\n"
-        "When learning mode is ON, VIGER stores the text you send, but does not store its own replies."
+        "ℹ️ /status"
     )
+
+
+async def model_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    info = await asyncio.to_thread(checkpoint_info)
+    if not info:
+        await update.message.reply_text(
+            f"🧠 {MODEL_NAME}\nNo trained checkpoint exists yet."
+        )
+        return
+
+    await update.message.reply_text(
+        f"🧠 {MODEL_NAME}\n"
+        f"Parameters: {info['params']:,}\n"
+        f"Vocabulary: {info['vocab']}\n"
+        f"Embedding: {info['dim']}\n"
+        f"Layers: {info['layers']}\n"
+        f"Heads: {info['heads']}\n"
+        f"Context: {info['block']} tokens\n"
+        f"Training target reached: {info['steps']} steps\n"
+        f"Checkpoint: {info['size_mb']:.1f} MB"
+    )
+
+
+async def benchmark_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE,
+) -> None:
+    status = await update.message.reply_text(
+        f"🧪 Running {MODEL_NAME} local benchmark…"
+    )
+    prompts = [
+        "Hi, what's up?",
+        "What is a CPU?",
+        "What is gravity?",
+        "Explain what AI is.",
+        "Tell me a short story.",
+        "What is the difference between formal and casual English?",
+    ]
+    try:
+        history: list[tuple[str, str]] = []
+        results: list[str] = []
+        total = 0.0
+        for prompt in prompts:
+            started = time.perf_counter()
+            answer = await asyncio.to_thread(
+                generate_text,
+                prompt,
+                history,
+                "",
+            )
+            elapsed = time.perf_counter() - started
+            total += elapsed
+            history = [(prompt, answer)]
+            results.append(f"• {prompt} → {elapsed:.2f}s")
+
+        avg = total / len(prompts)
+        info = await asyncio.to_thread(checkpoint_info)
+        params = info.get("params", 0)
+        await status.edit_text(
+            f"🧪 {MODEL_NAME} benchmark\n"
+            f"Parameters: {params:,}\n"
+            f"Tests: {len(prompts)}\n"
+            f"Average generation: {avg:.2f}s\n"
+            f"Total: {total:.2f}s\n\n"
+            + "\n".join(results)
+        )
+    except Exception as exc:
+        await status.edit_text(
+            f"❌ Benchmark failed.\n\n{type(exc).__name__}: {exc}"
+        )
 
 
 async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     try:
         import torch
+
         device = "CUDA" if torch.cuda.is_available() else "CPU"
     except Exception:
         device = "unknown"
 
-    lm_text = "not loaded"
-    if _lm is not None:
-        model, tokenizer = _lm
-        params = sum(p.numel() for p in model.parameters())
-        lm_text = f"TinyGPT v5 • {params:,} params • vocab {tokenizer.vocab_size}"
-
+    info = await asyncio.to_thread(checkpoint_info)
     lines, chars = learning_stats()
+    train = training_status()
+
+    lm_text = "not loaded"
+    if info:
+        lm_text = (
+            f"{MODEL_NAME} • {info['params']:,} params • "
+            f"vocab {info['vocab']}"
+        )
+
+    train_text = "none"
+    if train:
+        train_text = (
+            f"{train.get('phase', 'unknown')} "
+            f"{train.get('step', 0)}/{train.get('total_steps', 0)}"
+        )
+
     await update.message.reply_text(
-        f"🧠 TinyLM: {lm_text}\n"
+        f"🧠 Model: {lm_text}\n"
         f"🖼️ SR: {'loaded' if _sr is not None else 'not loaded'}\n"
         f"⚙️ Device: {device}\n"
         f"📚 User learning text: {lines} lines / {chars} chars\n"
-        "☁️ Text model: none downloaded\n"
-        "🌐 Image model: pretrained Swin2SR weights, cached locally after first download"
+        f"📈 Training: {train_text}\n"
+        f"🌐 Local knowledge: {'ON' if context.user_data.get('knowledge', True) else 'OFF'}\n"
+        "☁️ Text model API: none\n"
+        "🌐 Image baseline: local Swin2SR after first model download"
     )
 
 
@@ -159,15 +311,34 @@ async def voice_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await update.message.reply_text(f"Voice: {state}")
 
 
+async def knowledge_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE,
+) -> None:
+    value = (context.args[0].lower() if context.args else "on")
+    if value in {"on", "1", "true", "yes"}:
+        context.user_data["knowledge"] = True
+        await update.message.reply_text(
+            "🌐 Local knowledge assist: ON\n"
+            "VIGEROID may retrieve relevant facts from data/knowledge_base.txt.\n"
+            "Nothing is downloaded and model weights are not changed."
+        )
+    elif value in {"off", "0", "false", "no"}:
+        context.user_data["knowledge"] = False
+        await update.message.reply_text("🌐 Local knowledge assist: OFF")
+    else:
+        await update.message.reply_text(
+            "Use /knowledge on or /knowledge off"
+        )
+
+
 async def learn_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     value = (context.args[0].lower() if context.args else "on")
     if value in {"on", "1", "true", "yes"}:
         context.user_data["learn"] = True
         await update.message.reply_text(
             "📚 Learning mode: ON\n"
-            "Your normal text messages will be added to data/user_learning.txt.\n"
-            "The bot's replies are NOT stored.\n"
-            "When you are done, run /learn off, then /train."
+            "Your normal text messages will be added to data/user_learning.txt."
         )
     elif value in {"off", "0", "false", "no"}:
         context.user_data["learn"] = False
@@ -183,14 +354,20 @@ async def learn_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
             f"📚 Learning mode: {state}\nStored: {lines} lines / {chars} chars"
         )
     else:
-        await update.message.reply_text("Use /learn on, /learn off, or /learn stats")
+        await update.message.reply_text(
+            "Use /learn on, /learn off, or /learn stats"
+        )
 
 
-async def train_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def train_command(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE,
+) -> None:
     args = list(context.args)
     fresh = bool(args and args[0].lower() in {"new", "fresh", "reset"})
     if fresh:
         args.pop(0)
+
     raw_steps = args[0] if args else "5000"
     try:
         steps = max(100, min(int(raw_steps), 50000))
@@ -202,22 +379,28 @@ async def train_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
     context.user_data["learn"] = False
     status = await update.message.reply_text(
-        f"🧠 TinyGPT v5 {'starting fresh' if fresh else 'training/resuming'}…\n"
+        f"🧠 {MODEL_NAME} "
+        f"{'starting fresh' if fresh else 'training/resuming'}…\n"
         f"Target steps: {steps}\n"
-        "If an earlier run was interrupted, the latest recovery checkpoint will be resumed."
+        "Recovery checkpoints are saved during training."
     )
+
     try:
         from python.viger_tiny_lm import train
+
         started = time.perf_counter()
         await asyncio.to_thread(train, CORPUS, CHECKPOINT, steps, not fresh)
         await asyncio.to_thread(reload_lm)
         elapsed = time.perf_counter() - started
         await status.edit_text(
-            f"✅ TinyGPT v5 training target reached in {elapsed:.1f}s\n"
+            f"✅ {MODEL_NAME} reached target in {elapsed:.1f}s\n"
             f"Target steps: {steps}"
         )
     except Exception as exc:
-        await status.edit_text(f"❌ TinyGPT training failed.\n\n{type(exc).__name__}: {exc}")
+        await status.edit_text(
+            f"❌ {MODEL_NAME} training failed.\n\n"
+            f"{type(exc).__name__}: {exc}"
+        )
 
 
 async def teach_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -228,19 +411,23 @@ async def teach_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
     question, response = (part.strip() for part in raw.split("=>", 1))
     if not question or not response:
-        await update.message.reply_text("Both the question and answer are required.")
+        await update.message.reply_text(
+            "Both the question and answer are required."
+        )
         return
 
     CORPUS.parent.mkdir(parents=True, exist_ok=True)
     with CORPUS.open("a", encoding="utf-8") as file:
-        file.write(f"\n<USER> {question} <ASSISTANT> {response} <END>\n")
+        file.write(
+            f"\n<USER> {question} <ASSISTANT> {response} <END>\n"
+        )
 
     CHECKPOINT.unlink(missing_ok=True)
     global _lm
     _lm = None
     await update.message.reply_text(
         "✅ Example added to the training corpus.\n"
-        "Now run /train to teach TinyGPT on it."
+        "Run /train when you want VIGEROID to learn it."
     )
 
 
@@ -248,6 +435,7 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
     await query.answer()
     data = query.data or ""
+
     if data.startswith("scale:"):
         scale = int(data.split(":", 1)[1])
         context.user_data["scale"] = scale
@@ -255,61 +443,105 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             f"✅ AI scale: {scale}×\nSend a photo.",
             reply_markup=keyboard(),
         )
-    elif data == "status":
-        device = "CPU"
-        try:
-            import torch
-            if torch.cuda.is_available():
-                device = "CUDA"
-        except Exception:
-            pass
-        lines, chars = learning_stats()
+        return
+
+    if data == "model":
+        info = await asyncio.to_thread(checkpoint_info)
+        if not info:
+            text = f"🧠 {MODEL_NAME}\nNo checkpoint yet."
+        else:
+            text = (
+                f"🧠 {MODEL_NAME}\n"
+                f"{info['params']:,} parameters\n"
+                f"vocab {info['vocab']} • context {info['block']}\n"
+                f"{info['size_mb']:.1f} MB checkpoint"
+            )
+        await query.edit_message_text(text, reply_markup=keyboard())
+        return
+
+    if data == "knowledge":
+        enabled = context.user_data.get("knowledge", True)
         await query.edit_message_text(
-            f"🧠 TinyGPT v5: {'loaded' if _lm is not None else 'will train on first message'}\n"
-            f"🖼️ SR: {'loaded' if _sr is not None else 'will load on first photo'}\n"
-            f"📚 Learning text: {lines} lines / {chars} chars\n"
-            f"⚙️ Device: {device}",
+            f"🌐 Local knowledge assist: {'ON' if enabled else 'OFF'}\n"
+            "Use /knowledge on or /knowledge off.",
             reply_markup=keyboard(),
         )
 
 
-async def process_image(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def process_image(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE,
+) -> None:
     message = update.message
     if message is None:
         return
+
     scale = get_scale(context)
     workdir = Path(tempfile.mkdtemp(prefix="viger_sr_"))
-    status = await message.reply_text(f"⚙️ AI super-resolution {scale}×…")
+    status = await message.reply_text(
+        f"⚙️ AI super-resolution {scale}×…"
+    )
+
     try:
         if message.photo:
             telegram_file = await message.photo[-1].get_file()
             input_path = workdir / "input.jpg"
-        elif message.document and message.document.mime_type and message.document.mime_type.startswith("image/"):
+        elif (
+            message.document
+            and message.document.mime_type
+            and message.document.mime_type.startswith("image/")
+        ):
             telegram_file = await message.document.get_file()
-            suffix = Path(message.document.file_name or "input.png").suffix.lower()
-            if suffix not in {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tif", ".tiff"}:
+            suffix = Path(
+                message.document.file_name or "input.png"
+            ).suffix.lower()
+            if suffix not in {
+                ".jpg",
+                ".jpeg",
+                ".png",
+                ".webp",
+                ".bmp",
+                ".tif",
+                ".tiff",
+            }:
                 suffix = ".png"
             input_path = workdir / f"input{suffix}"
         else:
             return
 
-        await telegram_file.download_to_drive(custom_path=str(input_path))
+        await telegram_file.download_to_drive(
+            custom_path=str(input_path)
+        )
         image = Image.open(input_path).convert("RGB")
         started = time.perf_counter()
         engine = get_sr()
-        output = await asyncio.to_thread(engine.enhance, image, scale)
+        output = await asyncio.to_thread(
+            engine.enhance,
+            image,
+            scale,
+        )
         output_path = workdir / f"viger_ai_{scale}x.png"
-        await asyncio.to_thread(engine.save_4k_or_less, output, output_path)
+        await asyncio.to_thread(
+            engine.save_4k_or_less,
+            output,
+            output_path,
+        )
         elapsed = time.perf_counter() - started
 
         await status.delete()
         caption = (
-            f"✨ VIGER AI SR\nScale: {scale}×\n"
+            f"✨ {MODEL_NAME} SR\n"
+            f"Scale: {scale}×\n"
             f"Output: {output.width}×{output.height}\n"
-            f"Time: {elapsed:.2f}s\nModel: Swin2SR"
+            f"Time: {elapsed:.2f}s\n"
+            "Model: Swin2SR"
         )
         with output_path.open("rb") as file:
-            await message.reply_document(document=file, filename=output_path.name, caption=caption)
+            await message.reply_document(
+                document=file,
+                filename=output_path.name,
+                caption=caption,
+            )
     except Exception as exc:
         await status.edit_text(
             "❌ AI image processing failed.\n\n"
@@ -319,10 +551,14 @@ async def process_image(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         shutil.rmtree(workdir, ignore_errors=True)
 
 
-async def process_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def process_text(
+    update: Update,
+    context: ContextTypes.DEFAULT_TYPE,
+) -> None:
     message = update.message
     if message is None or not message.text:
         return
+
     text = message.text.strip()
     if not text:
         return
@@ -331,37 +567,70 @@ async def process_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         append_learning_text(text)
 
     history = list(context.user_data.get("history", []))[-3:]
+    knowledge_context = ""
+
+    if context.user_data.get("knowledge", True):
+        try:
+            from python.local_knowledge import format_context
+
+            knowledge_context = format_context(text, limit=2)
+        except Exception:
+            knowledge_context = ""
+
     status = await message.reply_text("🧠 Thinking…")
+
     try:
         started = time.perf_counter()
-        response = await asyncio.to_thread(generate_text, text, history)
+        response = await asyncio.to_thread(
+            generate_text,
+            text,
+            history,
+            knowledge_context,
+        )
         elapsed = time.perf_counter() - started
 
         history.append((text, response))
         context.user_data["history"] = history[-3:]
-        await status.edit_text(f"{response}\n\n({elapsed:.2f}s • local TinyGPT v5)")
+
+        await status.edit_text(
+            f"{response}\n\n"
+            f"({elapsed:.2f}s • local {MODEL_NAME})"
+        )
 
         if context.user_data.get("voice", False):
-            workdir = Path(tempfile.mkdtemp(prefix="viger_voice_"))
+            workdir = Path(
+                tempfile.mkdtemp(prefix="viger_voice_")
+            )
             try:
                 voice_path = workdir / "reply.wav"
-                await asyncio.to_thread(make_voice, response, voice_path)
+                await asyncio.to_thread(
+                    make_voice,
+                    response,
+                    voice_path,
+                )
                 if voice_path.exists():
                     with voice_path.open("rb") as audio:
                         await message.reply_voice(voice=audio)
             except Exception as exc:
-                await message.reply_text(f"🔊 Voice generation failed: {type(exc).__name__}: {exc}")
+                await message.reply_text(
+                    "🔊 Voice generation failed: "
+                    f"{type(exc).__name__}: {exc}"
+                )
             finally:
                 shutil.rmtree(workdir, ignore_errors=True)
+
     except Exception as exc:
         await status.edit_text(
-            "🧠 TinyGPT could not generate a response.\n\n"
+            f"🧠 {MODEL_NAME} could not generate a response.\n\n"
             f"{type(exc).__name__}: {exc}"
         )
 
 
 def main() -> None:
-    token = os.environ.get("VIGER_TELEGRAM_TOKEN") or input("Telegram bot token: ").strip()
+    token = (
+        os.environ.get("VIGER_TELEGRAM_TOKEN")
+        or input("Telegram bot token: ").strip()
+    )
     if not token:
         raise SystemExit("Telegram bot token is required.")
 
@@ -369,18 +638,36 @@ def main() -> None:
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
     application.add_handler(CommandHandler("status", status_command))
+    application.add_handler(CommandHandler("model", model_command))
+    application.add_handler(CommandHandler("benchmark", benchmark_command))
+    application.add_handler(CommandHandler("knowledge", knowledge_command))
     application.add_handler(CommandHandler("learn", learn_command))
     application.add_handler(CommandHandler("voice", voice_command))
     application.add_handler(CommandHandler("train", train_command))
     application.add_handler(CommandHandler("teach", teach_command))
     application.add_handler(CallbackQueryHandler(callback))
-    application.add_handler(MessageHandler(filters.PHOTO | filters.Document.IMAGE, process_image))
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, process_text))
-    print("[VIGER] Python-only Telegram bot is running. Ctrl+C to stop.")
+    application.add_handler(
+        MessageHandler(
+            filters.PHOTO | filters.Document.IMAGE,
+            process_image,
+        )
+    )
+    application.add_handler(
+        MessageHandler(
+            filters.TEXT & ~filters.COMMAND,
+            process_text,
+        )
+    )
+
+    print(f"[VIGER] {MODEL_NAME} Telegram bot is running.")
     try:
-        application.run_polling(allowed_updates=Update.ALL_TYPES)
+        application.run_polling(
+            allowed_updates=Update.ALL_TYPES
+        )
     except Conflict:
-        print("[VIGER] ERROR: another VIGER bot instance is already using this token. Stop it first.")
+        print(
+            "[VIGER] ERROR: another bot instance is already using this token."
+        )
         raise SystemExit(2)
 
 
