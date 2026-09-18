@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import hashlib
 import math
+import json
+import os
 import random
 import re
 from collections import Counter
@@ -21,6 +23,8 @@ from torch.nn import functional as F
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT / "data" / "chat.txt"
 DEFAULT_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
+RESUME_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm_resume.pt"
+TRAINING_STATUS = ROOT / "artifacts" / "training_status.json"
 
 MODEL_VERSION = 5
 MODEL_DIM = 256
@@ -329,6 +333,43 @@ def _make_model(vocab_size: int, package: dict | None = None) -> TinyGPT:
     )
 
 
+
+def _configure_cpu() -> None:
+    """Use a reasonable CPU thread count without requiring manual tuning."""
+    if torch.cuda.is_available():
+        return
+    requested = os.environ.get("VIGER_CPU_THREADS", "").strip()
+    if requested.isdigit():
+        threads = max(1, int(requested))
+    else:
+        threads = min(8, max(1, (os.cpu_count() or 2) - 1))
+    try:
+        torch.set_num_threads(threads)
+    except RuntimeError:
+        pass
+
+
+def _write_training_status(
+    *,
+    phase: str,
+    step: int,
+    total_steps: int,
+    train_loss: float | None = None,
+    val_loss: float | None = None,
+) -> None:
+    TRAINING_STATUS.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "phase": phase,
+        "step": int(step),
+        "total_steps": int(total_steps),
+        "train_loss": train_loss,
+        "val_loss": val_loss,
+    }
+    TRAINING_STATUS.write_text(
+        json.dumps(payload, indent=2),
+        encoding="utf-8",
+    )
+
 def _set_lr(optimizer: torch.optim.Optimizer, lr: float) -> None:
     for group in optimizer.param_groups:
         group["lr"] = lr
@@ -381,34 +422,44 @@ def _estimate_loss(
     return sum(losses) / len(losses)
 
 
+
 def train(
     corpus_path: Path = DEFAULT_CORPUS,
     checkpoint: Path = DEFAULT_CHECKPOINT,
     steps: int = 5000,
+    resume: bool = True,
+    checkpoint_every: int = 500,
 ) -> Path:
     random.seed(42)
     torch.manual_seed(42)
+    _configure_cpu()
+
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(42)
         torch.set_float32_matmul_precision("high")
 
-    # Build a local ~1M-token English corpus once if it is not present yet.
-    # The generated corpus is deterministic and remains local; it is included
-    # automatically by _load_corpus because that function loads every .txt in data/.
     from python.build_english_corpus import ensure_corpus
+
     ensure_corpus()
 
     corpus = _load_corpus(corpus_path)
+    current_hash = corpus_hash(corpus)
     tokenizer = TinyBPE.train(corpus, max_merges=MAX_BPE_MERGES)
     ids = torch.tensor(tokenizer.encode(corpus), dtype=torch.long)
     if len(ids) < MODEL_BLOCK + 2:
         raise ValueError("The corpus is too small. Add more English text.")
 
-    split = min(max(int(len(ids) * 0.90), MODEL_BLOCK + 2), len(ids) - MODEL_BLOCK - 2)
+    split = min(
+        max(int(len(ids) * 0.90), MODEL_BLOCK + 2),
+        len(ids) - MODEL_BLOCK - 2,
+    )
     train_ids = ids[:split]
     val_ids = ids[split:]
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    batch_size = 8 if device == "cuda" else 4
+
+    start_step = 0
     model = _make_model(tokenizer.vocab_size).to(device)
     optimizer = torch.optim.AdamW(
         model.parameters(),
@@ -416,17 +467,58 @@ def train(
         betas=(0.9, 0.95),
         weight_decay=0.02,
     )
-    batch_size = 8 if device == "cuda" else 4
+
+    resumed = False
+    if resume and RESUME_CHECKPOINT.exists():
+        try:
+            package = torch.load(
+                RESUME_CHECKPOINT,
+                map_location=device,
+                weights_only=True,
+            )
+            compatible = (
+                int(package.get("model_version", -1)) == MODEL_VERSION
+                and package.get("corpus_hash") == current_hash
+                and int(package.get("vocab_size", -1)) == tokenizer.vocab_size
+                and int(package.get("dim", -1)) == MODEL_DIM
+                and int(package.get("layers", -1)) == MODEL_LAYERS
+                and int(package.get("heads", -1)) == MODEL_HEADS
+                and int(package.get("block", -1)) == MODEL_BLOCK
+            )
+            if compatible:
+                model = _make_model(tokenizer.vocab_size, package).to(device)
+                model.load_state_dict(package["state_dict"])
+                optimizer.load_state_dict(package["optimizer_state"])
+                start_step = min(int(package.get("step", 0)), steps)
+                if package.get("python_random_state") is not None:
+                    random.setstate(package["python_random_state"])
+                if package.get("torch_rng_state") is not None:
+                    torch.set_rng_state(package["torch_rng_state"])
+                resumed = start_step > 0
+                if resumed:
+                    print(
+                        f"[VIGER TinyGPT] resuming from step {start_step}/{steps} "
+                        f"using {RESUME_CHECKPOINT.name}"
+                    )
+        except Exception as exc:
+            print(f"[VIGER TinyGPT] resume state ignored: {exc}")
 
     parameter_count = sum(p.numel() for p in model.parameters())
     print(
-        f"[VIGER TinyGPT v{MODEL_VERSION}] training from scratch on {device} "
+        f"[VIGER TinyGPT v{MODEL_VERSION}] "
+        f"{'resuming' if resumed else 'training from scratch'} on {device} "
         f"(params={parameter_count:,}, vocab={tokenizer.vocab_size}, "
         f"tokens={len(ids)}, context={MODEL_BLOCK})..."
     )
+    _write_training_status(
+        phase="training",
+        step=start_step,
+        total_steps=steps,
+    )
 
+    best_val = float("inf")
     model.train()
-    for step in range(steps):
+    for step in range(start_step, steps):
         _set_lr(optimizer, _schedule_lr(step, steps))
         x, y = _sample_batch(train_ids, MODEL_BLOCK, batch_size, device)
 
@@ -436,7 +528,8 @@ def train(
         nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
 
-        if (step + 1) % 250 == 0 or step == 0:
+        current_step = step + 1
+        if current_step % checkpoint_every == 0 or current_step == steps:
             train_loss = float(loss.item())
             val_loss = _estimate_loss(
                 model,
@@ -445,19 +538,45 @@ def train(
                 batch_size,
                 device,
             )
-            current_lr = optimizer.param_groups[0]["lr"]
+            best_val = min(best_val, val_loss)
+
+            resume_package = {
+                "model_version": MODEL_VERSION,
+                "corpus_hash": current_hash,
+                "state_dict": model.state_dict(),
+                "optimizer_state": optimizer.state_dict(),
+                "tokenizer_merges": tokenizer.to_state(),
+                "vocab_size": tokenizer.vocab_size,
+                "dim": model.dim,
+                "layers": model.layers,
+                "heads": model.heads,
+                "block": model.block,
+                "parameter_count": parameter_count,
+                "step": current_step,
+                "python_random_state": random.getstate(),
+                "torch_rng_state": torch.get_rng_state(),
+            }
+            RESUME_CHECKPOINT.parent.mkdir(parents=True, exist_ok=True)
+            torch.save(resume_package, RESUME_CHECKPOINT)
+            _write_training_status(
+                phase="training",
+                step=current_step,
+                total_steps=steps,
+                train_loss=train_loss,
+                val_loss=val_loss,
+            )
             print(
-                f"[VIGER TinyGPT] step {step + 1}/{steps} "
+                f"[VIGER TinyGPT] step {current_step}/{steps} "
                 f"train_loss={train_loss:.4f} "
                 f"val_loss={val_loss:.4f} "
-                f"lr={current_lr:.2e}"
+                f"lr={optimizer.param_groups[0]['lr']:.2e}"
             )
 
     checkpoint.parent.mkdir(parents=True, exist_ok=True)
     torch.save(
         {
             "model_version": MODEL_VERSION,
-            "corpus_hash": corpus_hash(corpus),
+            "corpus_hash": current_hash,
             "state_dict": model.state_dict(),
             "tokenizer_merges": tokenizer.to_state(),
             "vocab_size": tokenizer.vocab_size,
@@ -467,11 +586,21 @@ def train(
             "block": model.block,
             "parameter_count": parameter_count,
             "training_steps": steps,
+            "best_val_loss": None if best_val == float("inf") else best_val,
         },
         checkpoint,
     )
+
+    # The final checkpoint is complete; the resumable state is only needed for
+    # interrupted runs and can safely remain as a recovery point.
     print(f"[VIGER TinyGPT] saved {checkpoint}")
     print(f"[VIGER TinyGPT] parameters={parameter_count:,}")
+    _write_training_status(
+        phase="complete",
+        step=steps,
+        total_steps=steps,
+        val_loss=None if best_val == float("inf") else best_val,
+    )
     return checkpoint
 
 
