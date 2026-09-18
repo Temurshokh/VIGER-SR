@@ -54,6 +54,7 @@ Commands:
 /train
 /train 5000
 /train 8000
+/train new 5000
 ```
 
 `/teach` adds a supervised example to `data/chat.txt`. `/learn on` stores your normal text messages in the local `data/user_learning.txt` corpus so you can feed the model larger language samples without manually writing `/teach` for every line.
@@ -164,7 +165,7 @@ Training:
 - cosine learning-rate decay;
 - deterministic seed for reproducible experiments.
 
-The checkpoint stores the architecture metadata, tokenizer merges, model version, corpus hash, parameter count, and training steps.
+The checkpoint stores the architecture metadata, tokenizer merges, model version, corpus hash, parameter count, and training steps. A separate local recovery checkpoint stores optimizer and RNG state every 500 steps, so an interrupted CPU run can resume instead of losing hours of computation.
 
 ### 1.3M → 5M → 10M → 20M
 
@@ -211,9 +212,9 @@ VIGER-SR/
 │   ├── chat.txt               ← project chat examples
 │   ├── english_curriculum.txt ← core English
 │   ├── english_natural_c1.txt ← natural conversation + stories
-│   ├── english_advanced_c1.txt ← advanced English
-│   └── knowledge_base.txt      ← factual knowledge
-│   └── user_learning.txt      ← local user corpus, ignored by Git
+│   ├── english_advanced_c1.txt  ← advanced English
+├── knowledge_base.txt       ← factual knowledge
+└── user_learning.txt        ← local user corpus, ignored by Git
 ├── run_bot.py                 ← one-command launcher
 ├── run.py                     ← simple Python entry point
 └── requirements.txt           ← Python dependencies
