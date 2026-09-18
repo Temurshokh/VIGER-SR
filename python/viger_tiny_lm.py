@@ -655,7 +655,10 @@ def load_or_train(
             if int(package.get("model_version", -1)) != MODEL_VERSION:
                 raise ValueError("old model version")
             if package.get("corpus_hash") != current_hash:
-                raise ValueError("training corpus changed")
+                raise ValueError(
+                    "training corpus changed; run /train only when you want "
+                    "the current data to become new weights"
+                )
 
             tokenizer = TinyBPE(package["tokenizer_merges"])
             model = _make_model(tokenizer.vocab_size, package).to(device)
