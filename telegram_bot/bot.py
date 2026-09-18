@@ -195,15 +195,20 @@ async def train_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
     context.user_data["learn"] = False
     status = await update.message.reply_text(
-        f"🧠 Training TinyGPT v5 from scratch…\nSteps: {steps}\nThis can take a while on CPU."
+        f"🧠 TinyGPT v5 {'starting fresh' if fresh else 'training/resuming'}…\n"
+        f"Target steps: {steps}\n"
+        "If an earlier run was interrupted, the latest recovery checkpoint will be resumed."
     )
     try:
         from python.viger_tiny_lm import train
         started = time.perf_counter()
-        await asyncio.to_thread(train, CORPUS, CHECKPOINT, steps)
+        await asyncio.to_thread(train, CORPUS, CHECKPOINT, steps, not fresh)
         await asyncio.to_thread(reload_lm)
         elapsed = time.perf_counter() - started
-        await status.edit_text(f"✅ TinyGPT v5 retrained from scratch in {elapsed:.1f}s")
+        await status.edit_text(
+            f"✅ TinyGPT v5 training target reached in {elapsed:.1f}s\n"
+            f"Target steps: {steps}"
+        )
     except Exception as exc:
         await status.edit_text(f"❌ TinyGPT training failed.\n\n{type(exc).__name__}: {exc}")
 
