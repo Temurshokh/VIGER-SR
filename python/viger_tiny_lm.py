@@ -22,17 +22,17 @@ from torch.nn import functional as F
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT / "data" / "chat.txt"
-DEFAULT_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm.pt"
-RESUME_CHECKPOINT = ROOT / "artifacts" / "viger_tiny_lm_resume.pt"
+DEFAULT_CHECKPOINT = ROOT / "artifacts" / "vigeroid_6.pt"
+RESUME_CHECKPOINT = ROOT / "artifacts" / "vigeroid_6_resume.pt"
 TRAINING_STATUS = ROOT / "artifacts" / "training_status.json"
 
-MODEL_VERSION = 5  # checkpoint format/architecture version; display name is VIGEROID 6
+MODEL_VERSION = 6
 MODEL_NAME = "VIGEROID 6"
-MODEL_DIM = 256
-MODEL_LAYERS = 6
+MODEL_DIM = 336
+MODEL_LAYERS = 7
 MODEL_HEADS = 8
-MODEL_BLOCK = 256
-MAX_BPE_MERGES = 512
+MODEL_BLOCK = 384
+MAX_BPE_MERGES = 768
 
 SPECIAL_TOKENS = {
     "<SYSTEM>": 256,
@@ -439,7 +439,7 @@ def train(
         torch.cuda.manual_seed_all(42)
         torch.set_float32_matmul_precision("high")
 
-    from python.build_english_corpus import ensure_corpus
+    from python.build_english_quality_corpus import ensure_corpus
 
     ensure_corpus()
 
